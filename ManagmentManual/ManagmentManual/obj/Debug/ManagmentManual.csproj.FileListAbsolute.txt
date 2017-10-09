@@ -1,0 +1,17 @@
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.exe.config
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.exe
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.pdb
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csprojResolveAssemblyReference.cache
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\App.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_MarkupCompile.cache
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_MarkupCompile.lref
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.g.resources
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.Properties.Resources.resources
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csproj.GenerateResource.Cache
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csproj.CoreCompileInputs.cache
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.exe
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.pdb
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.baml
