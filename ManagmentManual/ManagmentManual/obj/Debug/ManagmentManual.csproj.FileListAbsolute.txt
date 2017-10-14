@@ -27,7 +27,6 @@ C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debu
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.xml
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csprojResolveAssemblyReference.cache
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.g.cs
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.g.cs
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\App.g.cs
