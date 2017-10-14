@@ -23,6 +23,8 @@ namespace ManagmentManual
         public LoginPage()
         {
             InitializeComponent();
+
+            var a = MainWindow.DB_DATA.UserTypes.ToArray();
         }
     }
 }

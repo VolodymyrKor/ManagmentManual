@@ -20,12 +20,18 @@ namespace ManagmentManual
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
+
         public MainWindow()
         {
             InitializeComponent();
 
             LoginPage loginPage = new LoginPage();
             MainFrame.Navigate(loginPage);
+
+            
+
         }
     }
 }
