@@ -26,5 +26,25 @@ namespace ManagmentManual
 
             //var a = MainWindow.DB_DATA.UserTypes.ToArray();
         }
+
+        private void AboutBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HelpBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegisterBtn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

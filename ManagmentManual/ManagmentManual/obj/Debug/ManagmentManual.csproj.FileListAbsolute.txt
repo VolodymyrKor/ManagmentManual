@@ -47,3 +47,8 @@ F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Ар�
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.pdb
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.xml
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\App.baml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignColors.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\App.baml
