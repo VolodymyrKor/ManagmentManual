@@ -21,7 +21,7 @@ namespace ManagmentManual
     public partial class MainWindow : Window
     {
 
-        public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
+        //public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
 
         public MainWindow()
         {

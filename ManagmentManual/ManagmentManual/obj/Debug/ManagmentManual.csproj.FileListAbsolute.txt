@@ -20,3 +20,25 @@ F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Ар�
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.xml
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.xml
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_Content.g.cs
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.exe.config
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.exe
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\ManagmentManual.pdb
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.xml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.g.cs
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.g.cs
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\App.g.cs
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_Content.g.cs
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_MarkupCompile.cache
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual_MarkupCompile.lref
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.baml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.baml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.g.resources
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.Properties.Resources.resources
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csproj.CoreCompileInputs.cache
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.exe
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.pdb

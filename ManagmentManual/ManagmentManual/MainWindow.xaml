@@ -5,6 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManagmentManual"
         mc:Ignorable="d"
-        Title="MainWindow" WindowState="Maximized" ResizeMode="CanMinimize">
+        Title="MainWindow" WindowState="Maximized" ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Frame x:Name="MainFrame" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"></Frame>
 </Window>
