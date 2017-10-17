@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("ManagmentManual")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("ManagmentManualCorp")]
 [assembly: AssemblyProduct("ManagmentManual")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

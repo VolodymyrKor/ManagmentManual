@@ -13,115 +13,184 @@
         <ImageBrush x:Key="backimg" 
                     Stretch="UniformToFill"
                     
-                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/backimg.png" />
+                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
     </Page.Resources>
     <Grid Background="{StaticResource ResourceKey=backimg}">
         <Grid>
-        <!--Grid top markup-->
-        <Grid>
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="0.5*"/>
-            </Grid.ColumnDefinitions>
+            <!--Grid top markup-->
+            <Grid>
 
-            <!--Grid left part-->
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" 
-                           Text="Welcome to Management Examinator"
-                           TextWrapping="Wrap"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           FontSize="40"
-                           FontWeight="SemiBold"/>
-                <material:Card Grid.Row="1"
-                               Margin="40,20,40,20">
-                <TextBlock  
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Grid left part-->
+                <Grid Grid.Column="0" Background="#66000000">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="#A5FFFFFF" CornerRadius="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock
+                            Text="Welcome to Management Examinator"
+                            TextWrapping="Wrap"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="40"
+                            FontWeight="SemiBold"
+                            Foreground="Black"
+                            Padding="20 10"/>
+                    </Border>
+                    <material:Card Grid.Row="1"
+                               Margin="40,20,40,20"
+                               Background="#A5FFFFFF"
+                               Foreground="Black"
+                               UniformCornerRadius="7">
+                        <TextBlock  
                            Text="This application is purposed to improve your time management skills. The system is teacher-student based, meaning that your seniors design some tasks for you that require scheduling and role definitioning. Please, procceed with login to continue."
                            TextWrapping="Wrap"
                            FontWeight="Light"
-                    Padding="10"
+                           Padding="10"
                            TextAlignment="Center"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            FontSize="30"
                            />
-                </material:Card>
-                <StackPanel Grid.Row="3"
+                    </material:Card>
+                    <StackPanel Grid.Row="3"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
-                    <Button  Width="150"
-                            Height="Auto"
-                             Margin="10"
-                             Padding="5"
+                        <Button
+                             Height="50"
+                             Width="130"
+                             Margin="15 20"
+                             Padding="10 5"
                              Name="AboutBtn"
                              Click="AboutBtn_Click">
-                        <StackPanel HorizontalAlignment="Center"
-                                    VerticalAlignment="Center">
-                            <material:PackIcon Kind="Information"
-                                               Width="40"
-                                               Height="40"
-                                               HorizontalAlignment="Center"/>
-                            <TextBlock Text="About"
+                            <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="About"
                                        FontSize="24"
                                        FontWeight="Light"
                                        HorizontalAlignment="Center"/>
-                        </StackPanel>
-                    </Button>
-                    <Button  Width="150"
-                            Height="Auto"
-                             Margin="10"
-                             Padding="5"
+                                <material:PackIcon Kind="Information"
+                                                   Width="32"
+                                                   Height="32"
+                                                   HorizontalAlignment="Right"
+                                                   Margin="10 0 0 0"/>
+                            </StackPanel>
+                        </Button>
+                        <Button
+                             Height="50"
+                             Width="130"
+                             Margin="15 20"
+                             Padding="10 5"
                              Name="HelpBtn"
                              Click="HelpBtn_Click">
-                        <StackPanel HorizontalAlignment="Center"
-                                    VerticalAlignment="Center">
-                            <material:PackIcon Kind="Help"
-                                               Width="40"
-                                               Height="40"
-                                               HorizontalAlignment="Center"/>
-                            <TextBlock Text="Help"
+                            <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="Help"
                                        FontSize="24"
                                        FontWeight="Light"
                                        HorizontalAlignment="Center"/>
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
-            </Grid>
-            <Thumb Grid.Column="1" 
-                   Background="Black"
-                   Width="3"
-                   Margin="5,10,5,10"
-                   />
-            <!--Grid right part-->
-            <Grid Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0"
+                                <material:PackIcon Kind="Help"
+                                                   Width="32"
+                                                   Height="32"
+                                                   HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <!--Grid right part-->
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
-                    <material:PackIcon Kind="Login"
+                        <material:PackIcon Kind="Login"
                                        Width="100"
                                        Height="100"/>
-                    <TextBlock Text="Login"
+                        <TextBlock Text="Login"
                                FontSize="36"
                                FontWeight="Light"/>
-                </StackPanel>
-                <material:Card Grid.Row="1"
+                    </StackPanel>
+                    <material:Card Grid.Row="1"
                                Margin="10">
-                    <Grid Margin="10,10,10,20">
+                        <Grid Margin="10,10,10,20">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontWeight" Value="Light"/>
+                                    <Setter Property="FontSize" Value="24" />
+                                </Style>
+
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="email: "
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"/>
+                            <TextBox Width="200"
+                                 Grid.Column="1"
+                                 Grid.Row="0"
+                                 VerticalAlignment="Center"
+                                 FontSize="24"
+                                 FontWeight="Light"
+                                 Name="EmailTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="password: "
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"/>
+                            <TextBox Width="200"
+                                 Grid.Column="1"
+                                 Grid.Row="1"
+                                 VerticalAlignment="Center"
+                                 FontSize="24"
+                                 FontWeight="Light"
+                                 Name="PassTextBox"/>
+                        </Grid>
+                    </material:Card>
+                    <Button Grid.Row="2"
+                        Margin="50"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Name="LoginBtn"
+                        Click="LoginBtn_Click">
+                        <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center">
+                            <TextBlock Text="Login"
+                                   VerticalAlignment="Center"
+                                   FontSize="24"
+                                   FontWeight="Light"/>
+                            <material:PackIcon Kind="ArrowRightBoldHexagonOutline"
+                                           VerticalAlignment="Center"
+                                           Height="40"
+                                           Width="40"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Grid Grid.Row="3">
                         <Grid.Resources>
                             <Style TargetType="TextBlock">
                                 <Setter Property="FontWeight" Value="Light"/>
@@ -130,81 +199,19 @@
 
                         </Grid.Resources>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.5*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column="0"
-                                   Grid.Row="0"
-                                   Text="email: "
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Right"/>
-                        <TextBox Width="200"
-                                 Grid.Column="1"
-                                 Grid.Row="0"
-                                 VerticalAlignment="Center"
-                                 FontSize="24"
-                                 FontWeight="Light"
-                                 Name="EmailTextBox"/>
-                        <TextBlock Grid.Column="0"
-                                   Grid.Row="1"
-                                   Text="password: "
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Right"/>
-                        <TextBox Width="200"
-                                 Grid.Column="1"
-                                 Grid.Row="1"
-                                 VerticalAlignment="Center"
-                                 FontSize="24"
-                                 FontWeight="Light"
-                                 Name="PassTextBox"/>
-                    </Grid>
-                </material:Card>
-                <Button Grid.Row="2"
-                        Margin="50"
-                        Height="50"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Name="LoginBtn"
-                        Click="LoginBtn_Click">
-                    <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="Login"
-                                   VerticalAlignment="Center"
-                                   FontSize="24"
-                                   FontWeight="Light"/>
-                        <material:PackIcon Kind="ArrowRightBoldHexagonOutline"
-                                           VerticalAlignment="Center"
-                                           Height="40"
-                                           Width="40"/>
-                    </StackPanel>
-                </Button>
-
-                <Grid Grid.Row="3">
-                    <Grid.Resources>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="FontWeight" Value="Light"/>
-                            <Setter Property="FontSize" Value="24" />
-                        </Style>
-
-                    </Grid.Resources>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="0.5*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0"
                                Grid.Row="0"
                                Text="Don't have an account? "
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right"/>
-                    <TextBlock Grid.Column="1"
+                        <TextBlock Grid.Column="1"
                                Grid.Row="0"
                                Text="Register"
                                TextDecorations="Underline"
@@ -212,11 +219,10 @@
                                HorizontalAlignment="Left"
                                Cursor="Hand"
                                Name="RegisterBtn"
-                               MouseDown="RegisterBtn_MouseDown"/>
+                               MouseDown="RegisterBtn_MouseDown" FontSize="26"/>
+                    </Grid>
                 </Grid>
-                
             </Grid>
-        </Grid>
         </Grid>
     </Grid>
 </Page>

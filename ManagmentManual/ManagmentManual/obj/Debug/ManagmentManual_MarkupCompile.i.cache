@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\
 ManagmentManual
 none
 false
 DEBUG;TRACE
-C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\App.xaml
-2563972398
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\App.xaml
+873985161
 2242334417
-20306319429
-21-1906820097
-Pages\LoginPage.xaml;MainWindow.xaml;
+26-70883409
+211338490976
+Pages\AboutPage.xaml;Pages\HelpPage.xaml;Pages\LoginPage.xaml;MainWindow.xaml;Pages\RegistrationPage.xaml;Pages\StartAdminPage.xaml;Pages\StartExpertPage.xaml;Pages\StartStudentPage.xaml;
 
-True
+False
 
