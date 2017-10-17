@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [ManagmentManualDB]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Database [ManagmentManualDB]    Script Date: 18-Oct-17 12:13:22 AM ******/
 CREATE DATABASE [ManagmentManualDB]
 GO
 ALTER DATABASE [ManagmentManualDB] SET COMPATIBILITY_LEVEL = 140
@@ -92,19 +92,19 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET QUERY_OPTIMIZER_HOTFIXES =
 GO
 USE [ManagmentManualDB]
 GO
-/****** Object:  User [rootUser]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  User [rootUser]    Script Date: 18-Oct-17 12:13:23 AM ******/
 CREATE USER [rootUser] FOR LOGIN [rootUser] WITH DEFAULT_SCHEMA=[dbo]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [rootUser]
 GO
-/****** Object:  Table [dbo].[Projects]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[Projects]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Projects](
 	[PROJECT_ID] [int] IDENTITY(1,1) NOT NULL,
-	[PROJECT_NAME] [nvarchar](100) NOT NULL,
+	[PROJECT_NAME] [nvarchar](250) NOT NULL,
 	[PROJECT_DESCRIPTION] [nvarchar](max) NOT NULL,
 	[PROJECT_OWNER_ID] [int] NOT NULL,
  CONSTRAINT [PK_Projects] PRIMARY KEY CLUSTERED 
@@ -113,7 +113,7 @@ CREATE TABLE [dbo].[Projects](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Results]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[Results]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -129,14 +129,14 @@ CREATE TABLE [dbo].[Results](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tasks]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[Tasks]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tasks](
 	[TASK_ID] [int] IDENTITY(1,1) NOT NULL,
-	[TASK_NAME] [nvarchar](100) NOT NULL,
+	[TASK_NAME] [nvarchar](250) NOT NULL,
 	[TASK_DESCRIPTION] [nvarchar](max) NOT NULL,
 	[TASK_PROJECT_ID] [int] NOT NULL,
 	[TASK_EXPECTED_TIME] [int] NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE [dbo].[Tasks](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TaskSolutions]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[TaskSolutions]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -165,7 +165,7 @@ CREATE TABLE [dbo].[TaskSolutions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Users]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -184,7 +184,7 @@ CREATE TABLE [dbo].[Users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserTypes]    Script Date: 14-Oct-17 5:48:50 PM ******/
+/****** Object:  Table [dbo].[UserTypes]    Script Date: 18-Oct-17 12:13:23 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -198,6 +198,31 @@ CREATE TABLE [dbo].[UserTypes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+SET IDENTITY_INSERT [dbo].[Projects] ON 
+
+INSERT [dbo].[Projects] ([PROJECT_ID], [PROJECT_NAME], [PROJECT_DESCRIPTION], [PROJECT_OWNER_ID]) VALUES (1, N'Test project name', N'It is test project description', 2)
+SET IDENTITY_INSERT [dbo].[Projects] OFF
+SET IDENTITY_INSERT [dbo].[Results] ON 
+
+INSERT [dbo].[Results] ([RESULT_ID], [RESULT_TIME], [RESULT_PRIORITY], [RESULT_COMPLEXITY]) VALUES (1, 45, 2, 3)
+INSERT [dbo].[Results] ([RESULT_ID], [RESULT_TIME], [RESULT_PRIORITY], [RESULT_COMPLEXITY]) VALUES (2, 55, 1, 5)
+SET IDENTITY_INSERT [dbo].[Results] OFF
+SET IDENTITY_INSERT [dbo].[Tasks] ON 
+
+INSERT [dbo].[Tasks] ([TASK_ID], [TASK_NAME], [TASK_DESCRIPTION], [TASK_PROJECT_ID], [TASK_EXPECTED_TIME], [TASK_EXPECTED_PRIORITY], [TASK_EXPECTED_COMPLEXITY]) VALUES (1, N'Test task name', N'Test task description', 1, 50, 1, 5)
+INSERT [dbo].[Tasks] ([TASK_ID], [TASK_NAME], [TASK_DESCRIPTION], [TASK_PROJECT_ID], [TASK_EXPECTED_TIME], [TASK_EXPECTED_PRIORITY], [TASK_EXPECTED_COMPLEXITY]) VALUES (2, N'Test task name 2', N'Test task description 2', 1, 50, 2, 2)
+SET IDENTITY_INSERT [dbo].[Tasks] OFF
+SET IDENTITY_INSERT [dbo].[TaskSolutions] ON 
+
+INSERT [dbo].[TaskSolutions] ([TASK_SOLUTION_ID], [TASK_SOLUTION_DATE], [TASK_SOLUTION_RESULT_ID], [TASK_SOLUTION_TASK_ID], [TASK_SOLUTION_ANSWERER_ID]) VALUES (1, CAST(N'2017-10-16T00:00:00.000' AS DateTime), 1, 1, 3)
+INSERT [dbo].[TaskSolutions] ([TASK_SOLUTION_ID], [TASK_SOLUTION_DATE], [TASK_SOLUTION_RESULT_ID], [TASK_SOLUTION_TASK_ID], [TASK_SOLUTION_ANSWERER_ID]) VALUES (2, CAST(N'2017-10-17T00:00:00.000' AS DateTime), 2, 2, 3)
+SET IDENTITY_INSERT [dbo].[TaskSolutions] OFF
+SET IDENTITY_INSERT [dbo].[Users] ON 
+
+INSERT [dbo].[Users] ([USER_ID], [USER_NAME], [USER_SURNAME], [USER_MIDDLE_NAME], [USER_EMAIL], [USER_PASSWORD], [USER_TYPE_ID]) VALUES (1, N'adminName', N'adminSurname', N'adminMiddleName', N'admin', N'admin', 1)
+INSERT [dbo].[Users] ([USER_ID], [USER_NAME], [USER_SURNAME], [USER_MIDDLE_NAME], [USER_EMAIL], [USER_PASSWORD], [USER_TYPE_ID]) VALUES (2, N'expertName', N'expertSurname', N'expertMiddleName', N'expert', N'expert', 2)
+INSERT [dbo].[Users] ([USER_ID], [USER_NAME], [USER_SURNAME], [USER_MIDDLE_NAME], [USER_EMAIL], [USER_PASSWORD], [USER_TYPE_ID]) VALUES (3, N'studentName', N'studentSurname', N'studentMiddleName', N'student', N'student', 3)
+SET IDENTITY_INSERT [dbo].[Users] OFF
 SET IDENTITY_INSERT [dbo].[UserTypes] ON 
 
 INSERT [dbo].[UserTypes] ([TYPE_ID], [TYPE_NAME]) VALUES (1, N'admin')
