@@ -27,7 +27,6 @@ C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debu
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.xml
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\ManagmentManual.csprojResolveAssemblyReference.cache
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\LoginPage.g.cs
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\MainWindow.g.cs
 C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\App.g.cs
@@ -47,3 +46,20 @@ F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Ар�
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.pdb
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.xml
 F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\App.baml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignColors.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Yura\Documents\ManagmentManual\ManagmentManual\ManagmentManual\obj\Debug\App.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\AboutPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\HelpPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\RegistrationPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartAdminPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartExpertPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartStudentPage.g.cs
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\AboutPage.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\HelpPage.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\RegistrationPage.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartAdminPage.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartExpertPage.baml
+F:\GoogleDrive\Science\_STUDY\Четвертий курс\1 семестр\Архітектура та проектування ПЗ\TrelloManual\trelloManual\ManagmentManual\ManagmentManual\obj\Debug\Pages\StartStudentPage.baml

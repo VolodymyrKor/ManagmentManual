@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ManagmentManual
+namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StartExpertPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartExpertPage : Page
     {
-
-        public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
-        public static int CURRENT_USER_ID = 0;
-
-        public MainWindow()
+        public StartExpertPage()
         {
             InitializeComponent();
-
-            MainFrame.NavigationService.Navigate(new LoginPage());
         }
     }
 }
