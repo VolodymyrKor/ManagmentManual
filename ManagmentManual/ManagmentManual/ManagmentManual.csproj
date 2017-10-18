@@ -90,6 +90,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Criteria.cs" />
+    <Compile Include="Models\Expert.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\TaskModel.cs" />
+    <Compile Include="Models\TaskSolutionModal.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -245,8 +253,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

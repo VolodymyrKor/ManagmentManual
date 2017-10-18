@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ManagmentManual.Models;
 using ManagmentManual.Pages;
 
 namespace ManagmentManual
@@ -71,18 +72,18 @@ namespace ManagmentManual
                     }
                     else
                     {
-                        throw new Exception("Undefined type of user");
+                        throw new Exception("Undefined type of user!");
                     }
                 }
                 else
                 {
-                    throw new Exception("Your email or password is wrong! Please write correct data");
+                    throw new Exception("Your email or password is wrong! Please write correct data!");
                 }
             }
             catch (Exception exception)
             {
                 // Todo [VK]: create cool design for any problems
-                MessageBox.Show("Smth went wrong!" + exception.Message, "Error");
+                MessageBox.Show("Smth went wrong! " + exception.Message, "Error");
             }
         }
 

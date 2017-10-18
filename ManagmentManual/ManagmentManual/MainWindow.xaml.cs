@@ -20,7 +20,7 @@ namespace ManagmentManual
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        // Global constants
         public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
         public static int CURRENT_USER_ID = 0;
 
