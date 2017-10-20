@@ -4,11 +4,218 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="RegistrationPage">
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" 
+                    Stretch="UniformToFill"
+                    
+                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Grid>
+        <!-- Navigation -->
+        <Border 
+            Grid.Row="0"
+            Grid.Column="0">
+            <Button
+                Height="Auto"
+                Width="Auto"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="24"
+                Name="BackToStartPage" Click="BackToStartPage_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ArrowLeftBold"
+                                             VerticalAlignment="Center"
+                                             Height="40"
+                                             Width="40"/>
+                    <TextBlock Text="Back to start"
+                               VerticalAlignment="Center"
+                               FontSize="24"
+                               FontWeight="Light"/>
+                </StackPanel>
+            </Button>
+        </Border>
         
+        <!-- Body -->
+        <Border x:Name="MainWrapper" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Background="#CCFFFFFF"
+                CornerRadius="8">
+            <Grid>
+                <TextBlock
+                    Text="Registration"
+                    Width="Auto"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    FontSize="40"
+                    Margin="0 30 0 0"
+                    Height="60">
+                </TextBlock>
+                <materialDesign:Card
+                    Margin="30 60 30 30"
+                    VerticalAlignment="Stretch"
+                    UniformCornerRadius="8">
+                    <Border 
+                        Margin="20"
+                        CornerRadius="8">
+                        <Grid Margin="0">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontWeight" Value="Light"/>
+                                    <Setter Property="FontSize" Value="26" />
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.7*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="1.5*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="Name: "
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"/>
+                            <TextBox Width="280"
+                                 Grid.Column="1"
+                                 Grid.Row="0"
+                                 VerticalAlignment="Center"
+                                 FontSize="24"
+                                 FontWeight="Light"
+                                 Name="StudentNameTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="Surname: "
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"/>
+                            <TextBox Width="280"
+                                 Grid.Column="1"
+                                 Grid.Row="1"
+                                 VerticalAlignment="Center"
+                                 FontSize="24"
+                                 FontWeight="Light"
+                                 Name="StudentSurnameTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="2"
+                                       Text="Middle name: "
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"/>
+                            <TextBox Width="280"
+                                     Grid.Column="1"
+                                     Grid.Row="2"
+                                     VerticalAlignment="Center"
+                                     FontSize="24"
+                                     FontWeight="Light"
+                                     Name="StudentMiddleNameTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="3"
+                                       Text="Email: "
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"/>
+                            <TextBox Width="280"
+                                     Grid.Column="1"
+                                     Grid.Row="3"
+                                     VerticalAlignment="Center"
+                                     FontSize="24"
+                                     FontWeight="Light"
+                                     Name="StudentEmailTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="4"
+                                       Text="Password: "
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"/>
+                            <PasswordBox Width="280"
+                                         Grid.Column="1"
+                                         Grid.Row="4"
+                                         VerticalAlignment="Center"
+                                         FontSize="24"
+                                         FontWeight="Light"
+                                         PasswordChar="*"
+                                         Name="StudentPasswordTextBox"/>
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="5"
+                                       Text="Password (again): "
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"/>
+                            <PasswordBox Width="280"
+                                         Grid.Column="1"
+                                         Grid.Row="5"
+                                         VerticalAlignment="Center"
+                                         FontSize="24"
+                                         FontWeight="Light"
+                                         PasswordChar="*"
+                                         Name="StudentPassword2TextBox"/>
+                            <Button
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.Row="6"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Height="60"
+                                Width="200"
+                                VerticalContentAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                Content="Register"
+                                FontSize="28"
+                                Margin="0 20 0 0"
+                                Name="RegisterStudentButton" Click="RegisterStudentButton_Click">
+                                <!--Next commented code is for disabling button until
+                                    all fields would be not empty but it reset button styles.
+                                    todo [VK]: need to find best way-->
+                                <!--<Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentNameTextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentSurnameTextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentMiddleNameTextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentEmailTextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentPasswordTextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Text, ElementName=StudentPassword2TextBox}" Value="">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>-->
+                            </Button>
+                        </Grid>
+                    </Border>
+                </materialDesign:Card>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
