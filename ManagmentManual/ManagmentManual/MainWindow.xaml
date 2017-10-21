@@ -14,5 +14,8 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" WindowState="Maximized" ResizeMode="CanMinimize">
-    <Frame x:Name="MainFrame" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"></Frame>
+    <Frame x:Name="MainFrame" 
+           VerticalContentAlignment="Stretch" 
+           HorizontalContentAlignment="Stretch"
+           NavigationUIVisibility="Hidden"></Frame>
 </Window>
