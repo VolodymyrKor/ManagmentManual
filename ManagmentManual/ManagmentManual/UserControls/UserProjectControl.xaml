@@ -23,7 +23,9 @@
                                FontWeight="ExtraLight"/>
                 </StackPanel>
                 <Button Grid.Column="1"
-                        Margin="10">
+                        Margin="10"
+                        MaxWidth="100"
+                        HorizontalAlignment="Right">
                     <materialDesign:PackIcon Kind="Delete"/>
                 </Button>
             </Grid>

@@ -5,10 +5,75 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="900" d:DesignWidth="900"
+      
+      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
       Title="StartAdminPage">
-
-    <Grid>
-        
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" 
+                    Stretch="UniformToFill"
+                    
+                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+        <Style TargetType="ScrollViewer" x:Key="expand">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Width" Value="100">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                     From="0"
+                                                     Duration="0:00:01"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="ExpertsSection"
+                                  Width="2*"
+                                  />
+                <ColumnDefinition Name="StudentsSection"
+                                  Width="0.1*"
+                                  />
+            </Grid.ColumnDefinitions>
+            
+            <ScrollViewer Grid.Column="0"
+                          Name="ExpertsScroV"
+                          Style="{StaticResource expand}"
+                          Background="Transparent"
+                          MouseDown="ExpertsSection_MouseDown"
+                          HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Auto">
+                
+                <StackPanel>
+                    
+                    <usercontrols:AdminUserControl/>
+                    <usercontrols:AdminUserControl/>
+                    <usercontrols:AdminUserControl/>
+                </StackPanel>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1"
+                          Name="StudentsScroV"
+                          Style="{StaticResource expand}"
+                          Background="Transparent"
+                          MouseDown="StudentsSection_MouseDown"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <usercontrols:AdminUserControl/>
+                    <usercontrols:AdminUserControl/>
+                    <usercontrols:AdminUserControl/>
+                </StackPanel>    
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>

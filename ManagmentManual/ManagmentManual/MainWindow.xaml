@@ -17,5 +17,6 @@
     <Frame x:Name="MainFrame" 
            VerticalContentAlignment="Stretch" 
            HorizontalContentAlignment="Stretch"
-           NavigationUIVisibility="Hidden"></Frame>
+           NavigationUIVisibility="Hidden"
+           ></Frame>
 </Window>
