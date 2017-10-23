@@ -122,6 +122,12 @@
     <Compile Include="Result.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Services\AuthorizationService.cs" />
+    <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Services\RegistrationService.cs" />
+    <Compile Include="Services\SolutionService.cs" />
+    <Compile Include="Services\TaskService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>

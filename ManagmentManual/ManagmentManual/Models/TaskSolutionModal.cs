@@ -27,7 +27,6 @@ namespace ManagmentManual.Models
         public System.DateTime DateTime
         {
             get => _dateTime;
-            set => _dateTime = value;
         }
 
         public int SolutionID

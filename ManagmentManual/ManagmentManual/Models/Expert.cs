@@ -21,6 +21,8 @@ namespace ManagmentManual.Models
 
         public Expert() { }
 
+        public Expert(User user) : base(user) { }
+
         #endregion
 
         // Functions

@@ -16,6 +16,15 @@ namespace ManagmentManual.Models
         #region Properties
         #endregion
 
+        // Constructors
+        #region Constructors
+
+        public Student() { }
+
+        public Student(User user) : base(user) { }
+        
+        #endregion
+
         // Functions
         #region Functions
         #endregion

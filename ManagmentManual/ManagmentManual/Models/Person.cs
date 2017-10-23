@@ -61,9 +61,26 @@ namespace ManagmentManual.Models
 
         #endregion
 
+        // Constructors
+        #region Constructors
+
+        public Person() { }
+
+        public Person(User user)
+        {
+            Name = user.USER_NAME;
+            SurName = user.USER_SURNAME;
+            MiddleName = user.USER_MIDDLE_NAME;
+            Email = user.USER_EMAIL;
+            Password = user.USER_PASSWORD;
+            PersonID = user.USER_ID;
+        }
+
+        #endregion
+
         // Functions
         #region Functions
-            
+
         public virtual List<ProjectModel> GetAllProjects()
         {
             var list = new List<ProjectModel>();

@@ -41,44 +41,24 @@ namespace ManagmentManual
         {
             try
             {
-                var _userEmail = EmailTextBox.Text;
-                var _userPass = PassTextBox.Text;
+                var userType = MainWindow.AUTHORIZATION_SERVICE.LogIn(EmailTextBox.Text, PassTextBox.Text);
 
-                var _currUser = MainWindow.DB_DATA.Users.FirstOrDefault(user =>
-                    (user.USER_EMAIL == _userEmail && user.USER_PASSWORD == _userPass));
-
-                if (_currUser != null)
+                Page nextPage = null;
+                switch (userType)
                 {
-                    MainWindow.CURRENT_USER_ID = _currUser.USER_ID;
-                    Page nextPage;
-                    switch (_currUser.UserType.TYPE_ID)
-                    {
-                        case 1:
-                            nextPage = new StartAdminPage();
-                            break;
-                        case 2:
-                            nextPage = new StartExpertPage();
-                            break;
-                        case 3:
-                            nextPage = new StartStudentPage();
-                            break;
-                        default:
-                            nextPage = null;
-                            break;
-                    }
-                    if (nextPage != null)
-                    {
-                        NavigationService?.Navigate(nextPage);
-                    }
-                    else
-                    {
-                        throw new Exception("Undefined type of user!");
-                    }
+                    case 1:
+                        nextPage = new StartAdminPage();
+                        break;
+                    case 2:
+                        nextPage = new StartExpertPage();
+                        break;
+                    case 3:
+                        nextPage = new StartStudentPage();
+                        break;
+                    default:
+                        throw new Exception("Unknown user type!");
                 }
-                else
-                {
-                    throw new Exception("Your email or password is wrong! Please write correct data!");
-                }
+                NavigationService?.Navigate(nextPage);
             }
             catch (Exception exception)
             {

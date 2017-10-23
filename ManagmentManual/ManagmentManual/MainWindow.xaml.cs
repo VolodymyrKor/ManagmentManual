@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ManagmentManual.Services;
 
 namespace ManagmentManual
 {
@@ -23,6 +24,12 @@ namespace ManagmentManual
     {
         // Global constants
         public static ManagmentManualDBEntities DB_DATA = new ManagmentManualDBEntities();
+        public static AuthorizationService AUTHORIZATION_SERVICE = AuthorizationService.Instance;
+        public static RegistrationService REGISTRATION_SERVICE = RegistrationService.Instance;
+        public static SolutionService SOLUTION_SERVICE = SolutionService.Instance;
+        public static ProjectService PROJECT_SERVICE = ProjectService.Instance;
+        public static UserService USER_SERVICE = UserService.Instance;
+        public static TaskService TASK_SERVICE = TaskService.Instance;
         public static int CURRENT_USER_ID = 0;
 
         public MainWindow()
