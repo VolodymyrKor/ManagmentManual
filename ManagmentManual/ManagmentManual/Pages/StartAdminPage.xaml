@@ -54,9 +54,8 @@
                           MouseDown="ExpertsSection_MouseDown"
                           HorizontalScrollBarVisibility="Hidden"
                           VerticalScrollBarVisibility="Auto">
-                
-                <StackPanel>
-                    
+
+                <StackPanel Name="UsersList">
                     <usercontrols:AdminUserControl/>
                     <usercontrols:AdminUserControl/>
                     <usercontrols:AdminUserControl/>

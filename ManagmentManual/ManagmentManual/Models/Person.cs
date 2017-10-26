@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagmentManual.Models
 {
-    public abstract class Person
+    public class Person
     {
         // Fields
         #region Fields
@@ -17,6 +17,7 @@ namespace ManagmentManual.Models
         private string _email;
         private string _password;
         private int _personId;
+        private PersonTypes _personType;
 
         #endregion
 
@@ -59,6 +60,12 @@ namespace ManagmentManual.Models
             set => _personId = value;
         }
 
+        public PersonTypes PersonType
+        {
+            get => _personType;
+            set => _personType = value;
+        }
+
         #endregion
 
         // Constructors
@@ -74,6 +81,7 @@ namespace ManagmentManual.Models
             Email = user.USER_EMAIL;
             Password = user.USER_PASSWORD;
             PersonID = user.USER_ID;
+            PersonType = (PersonTypes)user.USER_TYPE_ID;
         }
 
         #endregion
@@ -81,17 +89,21 @@ namespace ManagmentManual.Models
         // Functions
         #region Functions
 
-        public virtual List<ProjectModel> GetAllProjects()
+        public List<ProjectModel> GetAllProjects()
         {
-            var list = new List<ProjectModel>();
-            foreach (var project in MainWindow.DB_DATA.Projects)
-            {
-                list.Add(new ProjectModel(project));
-            }
-            return list;
+            return MainWindow.PROJECT_SERVICE.GetAllProjects();
         }
 
         #endregion
 
+    }
+
+
+    // User types
+    public enum PersonTypes
+    {
+        Administrator = 1,
+        Expert = 2,
+        Student = 3
     }
 }

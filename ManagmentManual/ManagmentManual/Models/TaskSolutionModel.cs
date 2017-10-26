@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ManagmentManual.Models
 {
-    public class TaskSolutionModal
+    public class TaskSolutionModel
     {
         // Fields
         #region Fields
@@ -27,6 +27,7 @@ namespace ManagmentManual.Models
         public System.DateTime DateTime
         {
             get => _dateTime;
+            set => _dateTime = value;
         }
 
         public int SolutionID
@@ -58,12 +59,12 @@ namespace ManagmentManual.Models
         // Constructors
         #region Constructors
 
-        public TaskSolutionModal()
+        public TaskSolutionModel()
         {
             _solutionResults = new Criteria();
         }
 
-        public TaskSolutionModal(DateTime dateTime, int solutionId, int taskId, int personAnswererId, Criteria solutionResults)
+        public TaskSolutionModel(DateTime dateTime, int solutionId, int taskId, int personAnswererId, Criteria solutionResults)
         {
             _dateTime = dateTime;
             _solutionId = solutionId;
@@ -72,7 +73,7 @@ namespace ManagmentManual.Models
             _solutionResults = solutionResults;
         }
 
-        public TaskSolutionModal(TaskSolutionModal taskSolutionModal)
+        public TaskSolutionModel(TaskSolutionModel taskSolutionModal)
         {
             _dateTime = taskSolutionModal.DateTime;
             _solutionId = taskSolutionModal.SolutionID;
@@ -81,7 +82,7 @@ namespace ManagmentManual.Models
             _solutionResults = new Criteria(taskSolutionModal.SolutionResults);
         }
 
-        public TaskSolutionModal(TaskSolution taskSolution)
+        public TaskSolutionModel(TaskSolution taskSolution)
         {
             _dateTime = taskSolution.TASK_SOLUTION_DATE;
             _solutionId = taskSolution.TASK_SOLUTION_ID;
