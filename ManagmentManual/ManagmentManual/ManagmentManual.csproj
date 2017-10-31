@@ -146,9 +146,13 @@
     <Compile Include="UserType.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AdministratorViewModel.cs" />
     <Compile Include="ViewModels\CriteriaViewModel.cs" />
+    <Compile Include="ViewModels\ExpertViewModel.cs" />
     <Compile Include="ViewModels\ObservableObject.cs" />
+    <Compile Include="ViewModels\PersonViewModel.cs" />
     <Compile Include="ViewModels\ProjectViewModel.cs" />
+    <Compile Include="ViewModels\StudentViewModel.cs" />
     <Compile Include="ViewModels\TaskSolutionViewModel.cs" />
     <Compile Include="ViewModels\TaskViewModel.cs" />
     <Page Include="Pages\AboutPage.xaml">

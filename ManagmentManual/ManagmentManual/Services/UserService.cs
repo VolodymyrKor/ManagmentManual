@@ -45,11 +45,11 @@ namespace ManagmentManual.Services
         public int AddUser(Person newUser)
         {
             var userType = 0;
-            if (newUser is Administrator)
+            if (newUser.PersonType == PersonTypes.Administrator)
                 userType = 1;
-            if (newUser is Expert)
+            if (newUser.PersonType == PersonTypes.Expert)
                 userType = 2;
-            if (newUser is Student)
+            if (newUser.PersonType == PersonTypes.Student)
                 userType = 3;
 
             MainWindow.DB_DATA.Users.Add(new User()
