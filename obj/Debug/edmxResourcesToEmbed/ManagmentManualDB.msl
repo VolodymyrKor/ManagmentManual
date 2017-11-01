@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManagmentManualDBModelStoreContainer" CdmEntityContainer="ManagmentManualDBEntities">
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
+          <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+          <ScalarProperty Name="PROJECT_DESCRIPTION" ColumnName="PROJECT_DESCRIPTION" />
+          <ScalarProperty Name="PROJECT_OWNER_ID" ColumnName="PROJECT_OWNER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.Result">
+        <MappingFragment StoreEntitySet="Results">
+          <ScalarProperty Name="RESULT_ID" ColumnName="RESULT_ID" />
+          <ScalarProperty Name="RESULT_TIME" ColumnName="RESULT_TIME" />
+          <ScalarProperty Name="RESULT_PRIORITY" ColumnName="RESULT_PRIORITY" />
+          <ScalarProperty Name="RESULT_COMPLEXITY" ColumnName="RESULT_COMPLEXITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.Task">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+          <ScalarProperty Name="TASK_NAME" ColumnName="TASK_NAME" />
+          <ScalarProperty Name="TASK_DESCRIPTION" ColumnName="TASK_DESCRIPTION" />
+          <ScalarProperty Name="TASK_PROJECT_ID" ColumnName="TASK_PROJECT_ID" />
+          <ScalarProperty Name="TASK_EXPECTED_TIME" ColumnName="TASK_EXPECTED_TIME" />
+          <ScalarProperty Name="TASK_EXPECTED_PRIORITY" ColumnName="TASK_EXPECTED_PRIORITY" />
+          <ScalarProperty Name="TASK_EXPECTED_COMPLEXITY" ColumnName="TASK_EXPECTED_COMPLEXITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskSolutions">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.TaskSolution">
+        <MappingFragment StoreEntitySet="TaskSolutions">
+          <ScalarProperty Name="TASK_SOLUTION_ID" ColumnName="TASK_SOLUTION_ID" />
+          <ScalarProperty Name="TASK_SOLUTION_DATE" ColumnName="TASK_SOLUTION_DATE" />
+          <ScalarProperty Name="TASK_SOLUTION_RESULT_ID" ColumnName="TASK_SOLUTION_RESULT_ID" />
+          <ScalarProperty Name="TASK_SOLUTION_TASK_ID" ColumnName="TASK_SOLUTION_TASK_ID" />
+          <ScalarProperty Name="TASK_SOLUTION_ANSWERER_ID" ColumnName="TASK_SOLUTION_ANSWERER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_SURNAME" ColumnName="USER_SURNAME" />
+          <ScalarProperty Name="USER_MIDDLE_NAME" ColumnName="USER_MIDDLE_NAME" />
+          <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="ManagmentManualDBModel.UserType">
+        <MappingFragment StoreEntitySet="UserTypes">
+          <ScalarProperty Name="TYPE_ID" ColumnName="TYPE_ID" />
+          <ScalarProperty Name="TYPE_NAME" ColumnName="TYPE_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
