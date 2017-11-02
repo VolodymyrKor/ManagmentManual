@@ -24,5 +24,11 @@ namespace ManagmentManual.Pages
         {
             InitializeComponent();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
+        }
     }
 }

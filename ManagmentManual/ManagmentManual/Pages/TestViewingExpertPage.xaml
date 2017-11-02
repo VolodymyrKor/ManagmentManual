@@ -27,7 +27,7 @@
                     VerticalAlignment="Top"
                     FontSize="20" Height="42"  Width="330" Margin="931,38,89,0" RenderTransformOrigin="0.924,0.524"   
                            />
-        <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="74" Margin="1261,17,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
+        <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="1261,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
         <StackPanel Background="#E5E4E2" HorizontalAlignment="Left" Height="503" Margin="246,85,0,0" VerticalAlignment="Top" Width="843">
             <Label x:Name="TestHeadingLbl"  Content="Test Heading" FontSize="24" HorizontalAlignment="Center"/>
             <TextBlock x:Name="TestDescription" Text="Software testing is an investigation conducted to provide stakeholders with information about the quality of the software product or service under test.[1] Software testing can also provide an objective, independent view of the software to allow the business to appreciate and understand the risks of software implementation. " FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,0 0 20" VerticalAlignment="Top" RenderTransformOrigin="1.132,0.231"/>
