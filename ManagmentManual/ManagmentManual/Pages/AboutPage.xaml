@@ -4,11 +4,605 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="AboutPage">
-
-    <Grid>
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" 
+                    Stretch="UniformToFill"
+                    
+                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}">
         
+        <ScrollViewer
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled"
+                      Margin="10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+                    <Button Margin="20,5,5,5"
+                            Name="BackBtn"
+                            Click="BackBtn_Click">
+                            
+                        <materialDesign:PackIcon Kind="ArrowLeft" Height="20" Width="20"/>
+                    </Button>
+
+                </StackPanel>
+                <TextBlock Text="Management Manual v.0.1.0" 
+                           FontSize="40"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Center"
+                           Margin="10"
+                           FontWeight="Light" />
+                <Thumb HorizontalAlignment="Stretch"
+                       Height="1"
+                       Margin="0,0,0,10"
+                       Background="WhiteSmoke" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <materialDesign:PackIcon Kind="InformationVariant" 
+                                             Height="300"
+                                             HorizontalAlignment="Center"
+                                             Width="300"
+                                             Margin="10"/>
+                    <StackPanel Grid.Column="1" >
+                        <TextBlock 
+                               FontSize="28"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="This application is purposed to improve your time management skills. The system is teacher-student based, meaning that your seniors design some tasks for you that require scheduling and role definitioning."/>
+                        <TextBlock 
+                               FontSize="28"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="The product gives full possibilities for testing various managing skills of any target audience. Test creation procedure is enough flexible to fit most common and uncomon types of activities, techniques and knowledge. Despite quite a lot of announced functions, product will get updates as soon as possible."/>
+                    </StackPanel>
+
+                </Grid>
+                <Thumb HorizontalAlignment="Stretch"
+                       Height="1"
+                       Margin="0,10,10,10"
+                       Background="WhiteSmoke" />
+                <Grid Margin="40,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <materialDesign:PackIcon
+                            Kind="Function"
+                            Margin="10"
+                            Height="300"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Width="300"
+                            Grid.Column="1"/>
+                    <StackPanel Grid.Column="0" Margin="10,0,0,0"
+                                Width="Auto">
+                        <TextBlock 
+                               FontSize="30"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Currently supported features:"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"
+                               Text="Test management "/>
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Project creating"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Project editing"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Project deleting"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Data saving"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"
+                               Text="User management "/>
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="2 Types of users"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Separated access to functionality"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Administrator account"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"
+                               Text="Task related "/>
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Task creating"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Task timing, priority, complexity"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"
+                               Text="User interface&amp;Miscellanous "/>
+                            <materialDesign:PackIcon Kind="CommentCheckOutline" 
+                                                     Height="25"
+                                                     Width="25"
+                                                     VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Margin="25,0,0,0"
+                                                     VerticalAlignment="Center"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="About, Help pages avaliable"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" 
+                                                     VerticalAlignment="Center"
+                                                     Margin="25,0,0,0"/>
+                            <TextBlock 
+                               FontSize="26"
+                               Margin="10,0,0,10"
+                               FontWeight="Regular"
+                               TextWrapping="Wrap"
+                               Text="Addaptive design"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Grid>
+                <Thumb HorizontalAlignment="Stretch"
+                       Height="1"
+                       Margin="0,0,0,10"
+                       Background="WhiteSmoke" />
+                <TextBlock Text="OUR TEAM" 
+                           FontSize="34"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Center"
+                           Margin="10"
+                           FontWeight="Regular" />
+                <StackPanel>
+                    <materialDesign:Card Margin="10,10,10,10"
+                                         Background="LightGray">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Face" 
+                                                     Height="200"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center"
+                                                     Width="200"
+                                                     Grid.Column="0"/>
+                            <TextBlock Text="こんにちは! I'm Yura, implementer and designer of this product! I try to taste everything in IT-sphere, I work as QA and am totaly mad about Japan and Japanese!" 
+                               FontSize="20"
+                               Grid.Column="1"
+                               TextWrapping="Wrap"  
+                               VerticalAlignment="Center"        
+                               Margin="20,10,10,10"
+                               FontWeight="Regular" />
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center">
+                             
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="UX/UI"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="C# developer"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="QA"/>
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </Grid>
+
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="10,10,10,10" Background="LightGray">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Face" Height="200"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center"
+                                                     Width="200" Grid.Column="0"/>
+                            <TextBlock Text="Hello! I'm Volodymyr, implementer &amp; project manager of this product! I feel myself as developer in a lot of spheres and love to evolve in various ways. I love my job and appreciate reliable people. " 
+                               FontSize="20"
+                                       VerticalAlignment="Center"
+                               Grid.Column="1"
+                               TextWrapping="Wrap"       
+                               Margin="20,10,10,10"
+                               FontWeight="Regular" />
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center">
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Project Manager"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Scrum-master"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="C# developer"/>
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </Grid>
+
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="10,10,10,10" Background="LightGray">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Face" Height="200"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center"
+                                                     Width="200" Grid.Column="0"/>
+                            <TextBlock Text="Hi! I'm Orest, implementer of this product! I am interested in different branches of development. I love to write code, create music and make things better)" 
+                               FontSize="20"
+                               Grid.Column="1"
+                               TextWrapping="Wrap"       
+                               VerticalAlignment="Center"
+                               Margin="20,10,10,10"
+                               FontWeight="Regular" />
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center">
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Idea advisor"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="UI Logic Implementer"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="C# developer"/>
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </Grid>
+
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="10,10,10,10" Background="LightGray">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Face" Height="200"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center"
+                                                     Width="200" Grid.Column="0"/>
+                            <TextBlock Text="Hello! I'm Olya, analyst and implementer of this project. I love design and aim to do my best in every kind of task, develop my skills and go far away beyond my limits." 
+                               FontSize="20"
+                               Grid.Column="1"
+                               TextWrapping="Wrap"       
+                               VerticalAlignment="Center"
+                               Margin="20,10,10,10"
+                               FontWeight="Regular" />
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center">
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Documentation"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="C# developer"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Buisness analyst"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Grid>
+
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="10,10,10,10" Background="LightGray">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Face" Height="200"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center"
+                                                     Width="200" Grid.Column="0"/>
+                            <TextBlock Text="Hi there! I'm Zoriana, implementer and database developer in this project. I'm fond of programming and my objective is to be reliable everytime and everywhere." 
+                               FontSize="20"
+                               Grid.Column="1"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               Margin="20,10,10,10"
+                               FontWeight="Regular" />
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center">
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Database developer"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Designer"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <materialDesign:PackIcon Kind="Label"
+                                                             VerticalAlignment="Center"/>
+                                    <TextBlock 
+                                       FontSize="26"
+                                       Margin="10,0,0,5"
+                                       FontWeight="Regular"
+                                       TextWrapping="Wrap"
+                                       Text="Documentation"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Grid>
+
+                    </materialDesign:Card>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
