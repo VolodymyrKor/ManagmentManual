@@ -113,6 +113,9 @@
     <Compile Include="Pages\StartStudentPage.xaml.cs">
       <DependentUpon>StartStudentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TestViewingExpertPage.xaml.cs">
+      <DependentUpon>TestViewingExpertPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Project.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
@@ -139,6 +142,12 @@
     </Compile>
     <Compile Include="UserControls\AdminUserControl.xaml.cs">
       <DependentUpon>AdminUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectControl.xaml.cs">
+      <DependentUpon>ProjectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskExpertViewUserControl.xaml.cs">
+      <DependentUpon>TaskExpertViewUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserProjectControl.xaml.cs">
       <DependentUpon>UserProjectControl.xaml</DependentUpon>
@@ -208,9 +217,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TestViewingExpertPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\AdminUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskExpertViewUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\UserProjectControl.xaml">
       <SubType>Designer</SubType>
@@ -256,6 +277,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AddResourses\bcg.png" />
+    <Resource Include="AddResourses\delete.png" />
+    <Resource Include="AddResourses\eye.png" />
+    <Resource Include="AddResourses\logout-xxl.png" />
+    <Resource Include="AddResourses\plus.png" />
+    <Resource Include="AddResourses\return.png" />
     <Content Include="ManagmentManualDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManagmentManualDB.edmx</DependentUpon>

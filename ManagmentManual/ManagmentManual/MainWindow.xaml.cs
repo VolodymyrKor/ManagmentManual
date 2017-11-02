@@ -36,7 +36,7 @@ namespace ManagmentManual
         {
             InitializeComponent();
 
-            MainFrame.NavigationService.Navigate(new LoginPage());
+            MainFrame.NavigationService.Navigate(new StartExpertPage());
         }
     }
 }
