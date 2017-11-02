@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
+      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
       mc:Ignorable="d" 
      d:DesignHeight="650" d:DesignWidth="1350 "
       Title="StartExpertPage">
@@ -12,9 +13,42 @@
                     Stretch="UniformToFill"
                                         ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
 
-   </Page.Resources>
+    </Page.Resources>
 
     <Grid Background="{StaticResource ResourceKey=backimg}" >
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Text=" You are logged in as Name.S "
+                    FontStyle="Oblique"
+                    
+                     Foreground="White"
+                    TextAlignment="Left"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="20" Height="42"  Width="330" Margin="44,49,67,0" RenderTransformOrigin="0.924,0.524" Grid.Column="2"   
+                           />
+        <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="74" Margin="367,17,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="1" />
+        <usercontrols:ProjectControl Margin="10" Grid.Row="2" Grid.Column="1"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="3" Grid.Column="1"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="1"  Grid.Column="1"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="1" Grid.Column="2"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="2" Grid.Column="2"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="1"  Grid.Column="2"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="2"/>
+        <usercontrols:ProjectControl Margin="10" Grid.Row="3"/>
+        <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/plus.png" HorizontalAlignment="Left" Height="96" Margin="187,15,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.266,0.716" Grid.Column="2" Grid.Row="3"/>
+        <Label Content="Click to add project" Foreground="white" FontSize="18" Grid.Column="2" HorizontalAlignment="Left" Margin="148,111,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Label Content="Your projects" Foreground="white" FontSize="30" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
+
 </Page>
