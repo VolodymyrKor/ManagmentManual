@@ -1,0 +1,34 @@
+﻿<Page x:Class="ManagmentManual.Pages.ResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ManagmentManual.Pages"
+     xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"     
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1350"
+      Title="ResultPage">
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" Stretch="UniformToFill" ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="600"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="750"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="367,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
+        <materialDesign:Card Margin="5" Grid.Column="1" Grid.Row="1">
+            <Grid Height="400">
+                <TextBlock Text="Your Result" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="28" Margin="282,34,282,310" Foreground="#FFB9B9B9"/>
+                <TextBlock Text="23/40" HorizontalAlignment="Center" FontWeight="Bold" FontSize="48" Margin="0,119,0,229"/>
+                <Button Width="200" MaxWidth="100" HorizontalAlignment="Center" Content="Back to Tests" Margin="265,288,265,80" Click="Button_Click" MinWidth="200"/>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Page>
