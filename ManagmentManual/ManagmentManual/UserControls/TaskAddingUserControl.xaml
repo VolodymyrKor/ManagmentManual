@@ -4,15 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ManagmentManual.UserControls"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="956"
+             d:DesignHeight="80" d:DesignWidth="956"
              >
-
-    <Grid Background="#E5E4E2" Margin="0,0,0,10" Height="80" VerticalAlignment="Bottom">
-        <TextBox  FontSize="22" HorizontalAlignment="Left" Height="42"  TextWrapping="Wrap" Text="This is task description" VerticalAlignment="Top" Width="360" Margin="10,38,0,0"/>
-        <TextBox   FontSize="22" HorizontalAlignment="Left"  x:Name="TimeTxt" Margin="822,42,0,5" TextWrapping="Wrap" Text="00" Width="28" RenderTransformOrigin="1.643,0.455"/>
-        <TextBox  FontSize="22" HorizontalAlignment="Left"   x:Name="PriorityTxt" Height="42" Margin="679,38,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="28" RenderTransformOrigin="2.107,0.524"/>
-        <TextBox  FontSize="22" HorizontalAlignment="Left"  x:Name="ComplexityTxt"  Height="38" Margin="562,42,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="28" RenderTransformOrigin="1.143,0.526"/>
-
-    </Grid>
+    <materialDesign:Card Margin="5">
+        <Grid Margin="0,0,0,10" Height="80" VerticalAlignment="Bottom">
+            <TextBox  FontSize="22" HorizontalAlignment="Left" Height="42"  TextWrapping="Wrap" Text="This is task description" VerticalAlignment="Top" Width="360" Margin="10,38,0,0"/>
+            <TextBox   FontSize="22" HorizontalAlignment="Left"  x:Name="TimeTxt" Margin="822,38,0,5" TextWrapping="Wrap" Text="00" Width="28" RenderTransformOrigin="1.643,0.455"/>
+            <TextBox  FontSize="22" HorizontalAlignment="Left"   x:Name="PriorityTxt" Height="42" Margin="679,38,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="28" RenderTransformOrigin="2.107,0.524"/>
+            <TextBox  FontSize="22" HorizontalAlignment="Left"  x:Name="ComplexityTxt"  Height="38" Margin="562,38,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="28" RenderTransformOrigin="1.143,0.526"/>
+        </Grid>
+    </materialDesign:Card>
 </UserControl>

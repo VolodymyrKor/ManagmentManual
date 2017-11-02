@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ManagmentManual.Pages
+namespace ManagmentManual.UserControls
 {
     /// <summary>
-    /// Interaction logic for StartStudentPage.xaml
+    /// Interaction logic for ProjectForStudentControl.xaml
     /// </summary>
-    public partial class StartStudentPage : Page
+    public partial class ProjectForStudentControl : UserControl
     {
-        public StartStudentPage()
+        public ProjectForStudentControl()
         {
             InitializeComponent();
-        }
-
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new LoginPage());
         }
     }
 }

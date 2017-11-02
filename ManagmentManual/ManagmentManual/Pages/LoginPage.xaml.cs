@@ -43,21 +43,22 @@ namespace ManagmentManual
             {
                 var userType = MainWindow.AUTHORIZATION_SERVICE.LogIn(EmailTextBox.Text, PassTextBox.Text);
 
-                Page nextPage = null;
-                switch (userType)
-                {
-                    case 1:
-                        nextPage = new StartAdminPage();
-                        break;
-                    case 2:
-                        nextPage = new StartExpertPage();
-                        break;
-                    case 3:
-                        nextPage = new StartStudentPage();
-                        break;
-                    default:
-                        throw new Exception("Unknown user type!");
-                }
+                 Page nextPage = null;
+                 /* switch (userType)
+                 {
+                     case 1:
+                         nextPage = new StartAdminPage();
+                         break;
+                     case 2:
+                         nextPage = new StartExpertPage();
+                         break;
+                     case 3:
+                         nextPage = new StartStudentPage();
+                         break;
+                     default:
+                         throw new Exception("Unknown user type!");
+                 }*/
+                nextPage = new StartStudentPage();
                 NavigationService?.Navigate(nextPage);
             }
             catch (Exception exception)

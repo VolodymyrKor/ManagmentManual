@@ -24,9 +24,9 @@
                     TextAlignment="Left"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    FontSize="20" Height="42"  Width="330" Margin="931,38,89,0"  RenderTransformOrigin="0.924,0.524"   
+                    FontSize="20" Height="42"  Width="330" Margin="931,48,89,0"  RenderTransformOrigin="0.924,0.524"   
                            />
-        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="74" Margin="1261,17,0,0"  VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
+        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="1261,42,0,0"  VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
         <Label Content="Add new project" Foreground="White" FontSize="24" HorizontalAlignment="Left" Margin="570,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.421,-0.269" Width="238"/>
         <Label Content="Project title" Foreground="White" FontSize="24" HorizontalAlignment="Left" Margin="46,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.421,-0.269" Width="238"/>
         <Label Content="Description" Foreground="White" FontSize="24" HorizontalAlignment="Left" Margin="46,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.421,-0.269" Width="238"/>
@@ -34,9 +34,9 @@
             <TextBox Background="#E5E4E2" FontSize="22" HorizontalAlignment="Left" Height="43" Margin="0,142,0,0" TextWrapping="Wrap" Text="This is a simple heading" VerticalAlignment="Top" Width="956"/>
             <TextBox Background="#E5E4E2" AcceptsReturn="True" FontSize="22" HorizontalAlignment="Left" Height="129" TextWrapping="Wrap" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." VerticalAlignment="Top" Width="956" Margin="0,10, 0,0"/>
             <Label Background="#E5E4E2"  Content="Task description                                                     Time(%)  Priority(1-5)   Complexity(1-5)"  FontSize="24" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.421,-0.269" Width="956"/>
-            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="54"/>
-            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="54"/>
-            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="54"/>
+            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="80"/>
+            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="80"/>
+            <usercontrols:TaskAddingUserControl Margin="0,10,0,0" Height="80"/>
             
         </StackPanel>
         <Label Content="Tasks" Foreground="White" FontSize="24" HorizontalAlignment="Left" Margin="46,389,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.421,-0.269" Width="238"/>

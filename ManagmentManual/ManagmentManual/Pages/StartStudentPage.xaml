@@ -4,11 +4,45 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
+      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"      
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="650" d:DesignWidth="1350"
       Title="StartStudentPage">
-
-    <Grid>
-        
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" Stretch="UniformToFill" ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Text=" You are logged in as Name.S "
+                    FontStyle="Oblique"
+                    x:Name="UserNameLbl"
+                     Foreground="White"
+                    TextAlignment="Left"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="20" Height="42"  Width="330" Margin="44,49,67,0" RenderTransformOrigin="0.924,0.524" Grid.Column="2"   
+                           />
+        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="367,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1" />
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2" Grid.Column="1"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="3" Grid.Column="1"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1"  Grid.Column="1"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1" Grid.Column="2"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2" Grid.Column="2"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1"  Grid.Column="2"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2"/>
+        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="3"/>
+        <Label Content="Projects" Foreground="white" FontSize="30" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
+
 </Page>

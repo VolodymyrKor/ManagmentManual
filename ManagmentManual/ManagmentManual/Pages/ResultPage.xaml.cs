@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Interaction logic for StartStudentPage.xaml
+    /// Interaction logic for ResultPage.xaml
     /// </summary>
-    public partial class StartStudentPage : Page
+    public partial class ResultPage : Page
     {
-        public StartStudentPage()
+        public ResultPage()
         {
             InitializeComponent();
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new LoginPage());
+
         }
     }
 }

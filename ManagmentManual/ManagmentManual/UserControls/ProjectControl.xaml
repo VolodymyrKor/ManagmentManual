@@ -6,20 +6,25 @@
              xmlns:local="clr-namespace:ManagmentManual.UserControls"
              mc:Ignorable="d" 
               xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             d:DesignHeight="175" d:DesignWidth="440"
-             Background="#E5E4E2"
+             d:DesignHeight="190" d:DesignWidth="440"
             
              >
-    <Grid Background="#E5E4E2" Opacity="0.9" >
-        <Label  Content="Test Heading" FontSize="24" HorizontalAlignment="Left" Margin="155,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.635,-1.012"/>
-        <Label Content="This is a tiny test description........" FontSize="14" HorizontalAlignment="Left" Margin="35,52,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Opacity="0.7" Source="pack://application:,,,/ManagmentManual;component/AddResourses/delete.png" Height="43" Margin="368,110,0,0" VerticalAlignment="Top" Width="51"/>
-        <Image MouseDown="Image_MouseDown" HorizontalAlignment="Left" Opacity="0.7" Source="pack://application:,,,/ManagmentManual;component/AddResourses/eye.png" Height="51" Margin="292,110,0,0" VerticalAlignment="Top" Width="54"/>
-        <Label Content="Creation Date" FontSize="16" HorizontalAlignment="Left" Margin="35,127,0,0" VerticalAlignment="Top"/>
-        <Label Content="Times passed" FontSize="16" HorizontalAlignment="Left" Margin="35,101,0,0" VerticalAlignment="Top"/>
-        <Label Content="1.10.2017" FontSize="16" HorizontalAlignment="Left" Margin="136,127,0,0" VerticalAlignment="Top"/>
-        <Label Content="88" FontSize="16" HorizontalAlignment="Left" Margin="147,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.13,0.494"/>
-        
-
-    </Grid>
+    <materialDesign:Card Margin="5">
+        <Grid Opacity="0.9" Height="180" Background="#FFFAFAFA" >
+            <Label  Content="Test Heading" FontSize="24" HorizontalAlignment="Left" Margin="141,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.635,-1.012"/>
+            <Label Content="This is a tiny test description........" FontSize="14" HorizontalAlignment="Left" Margin="35,52,0,0" VerticalAlignment="Top"/>
+            <Button MaxWidth="100" Name="DeleteButton"
+                        HorizontalAlignment="Right" Margin="0,112,26,36">
+                <materialDesign:PackIcon Kind="Delete"/>
+            </Button>
+            <Button MaxWidth="100" Name="ShowButton"
+                        HorizontalAlignment="Right" Margin="0,112,85,36">
+                <materialDesign:PackIcon Kind="Eye"/>
+            </Button>
+            <Label Opacity="0.6" Content="Creation Date" FontSize="12" HorizontalAlignment="Left" Margin="35,118,0,0" VerticalAlignment="Top"/>
+            <Label Opacity="0.6" Content="Times passed" FontSize="12" HorizontalAlignment="Left" Margin="35,100,0,0" VerticalAlignment="Top"/>
+            <Label Opacity="0.6" Content="1.10.2017" FontSize="12" HorizontalAlignment="Left" Margin="123,118,0,0" VerticalAlignment="Top"/>
+            <Label Opacity="0.6" Content="88" FontSize="12" HorizontalAlignment="Left" Margin="123,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.13,0.494"/>
+        </Grid>
+    </materialDesign:Card>
 </UserControl>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Interaction logic for StartStudentPage.xaml
+    /// Interaction logic for TestViewingStudentPage.xaml
     /// </summary>
-    public partial class StartStudentPage : Page
+    public partial class TestViewingStudentPage : Page
     {
-        public StartStudentPage()
+        public TestViewingStudentPage()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace ManagmentManual.Pages
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new LoginPage());
+            service.Navigate(new StartExpertPage());
         }
     }
 }

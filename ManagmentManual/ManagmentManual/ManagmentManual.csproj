@@ -67,6 +67,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -107,6 +108,9 @@
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ResultPage.xaml.cs">
+      <DependentUpon>ResultPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\StartAdminPage.xaml.cs">
       <DependentUpon>StartAdminPage.xaml</DependentUpon>
     </Compile>
@@ -118,6 +122,9 @@
     </Compile>
     <Compile Include="Pages\TestViewingExpertPage.xaml.cs">
       <DependentUpon>TestViewingExpertPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestViewingStudentPage.xaml.cs">
+      <DependentUpon>TestViewingStudentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Project.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
@@ -149,11 +156,17 @@
     <Compile Include="UserControls\ProjectControl.xaml.cs">
       <DependentUpon>ProjectControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ProjectForStudentControl.xaml.cs">
+      <DependentUpon>ProjectForStudentControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TaskAddingUserControl.xaml.cs">
       <DependentUpon>TaskAddingUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TaskExpertViewUserControl.xaml.cs">
       <DependentUpon>TaskExpertViewUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskStudentViewUserControl.xaml.cs">
+      <DependentUpon>TaskStudentViewUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserProjectControl.xaml.cs">
       <DependentUpon>UserProjectControl.xaml</DependentUpon>
@@ -215,6 +228,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\StartAdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\TestViewingStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AdminUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,6 +260,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UserControls\ProjectForStudentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\TaskAddingUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -246,6 +271,10 @@
     <Page Include="UserControls\TaskExpertViewUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskStudentViewUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserProjectControl.xaml">
       <SubType>Designer</SubType>

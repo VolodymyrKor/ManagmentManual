@@ -1,20 +1,15 @@
-﻿<Page x:Class="ManagmentManual.Pages.TestViewingExpertPage"
+﻿<Page x:Class="ManagmentManual.Pages.TestViewingStudentPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
       mc:Ignorable="d" 
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="650" d:DesignWidth="1350 "
             xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
-      Title="TestViewingExpertPage">
+      Title="TestViewingStudentPage">
     <Page.Resources>
-        <ImageBrush x:Key="backimg" 
-                    Stretch="UniformToFill"
-                                        ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
-
-
+        <ImageBrush x:Key="backimg" Stretch="UniformToFill" ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
     </Page.Resources>
 
     <Grid Background="{StaticResource ResourceKey=backimg}">
@@ -25,18 +20,18 @@
                     TextAlignment="Left"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    FontSize="20" Height="42"  Width="330" Margin="931,38,89,0" RenderTransformOrigin="0.924,0.524"   
+                    FontSize="20" Height="42"  Width="278" Margin="978,48,94,0" RenderTransformOrigin="0.924,0.524"   
                            />
         <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="1261,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
-        <StackPanel Background="#E5E4E2" HorizontalAlignment="Left" Height="503" Margin="246,85,0,0" VerticalAlignment="Top" Width="843">
-            <Label x:Name="TestHeadingLbl"  Content="Test Heading" FontSize="24" HorizontalAlignment="Center"/>
+        <StackPanel Background="#E5E4E2" HorizontalAlignment="Left" Height="565" Margin="246,101,0,-16" VerticalAlignment="Top" Width="843">
+            <Label x:Name="TestHeadingLbl"  Content="Test Heading" FontSize="24" HorizontalAlignment="Center" Margin="347,0"/>
             <TextBlock x:Name="TestDescription" Text="Software testing is an investigation conducted to provide stakeholders with information about the quality of the software product or service under test.[1] Software testing can also provide an objective, independent view of the software to allow the business to appreciate and understand the risks of software implementation. " FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,0 0 20" VerticalAlignment="Top" RenderTransformOrigin="1.132,0.231"/>
-            <Label Content="Task                                                                                             Time  Priority  Complexity     " Margin="20,0,35,0" FontSize="20" RenderTransformOrigin="0.065,1.462"/>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
+            <Label Content="Task                                                                                    Time        Priority   Complexity" Margin="20,0,35,0" FontSize="20" RenderTransformOrigin="0.065,1.462"/>
+            <usercontrols:TaskStudentViewUserControl/>
+            <usercontrols:TaskStudentViewUserControl/>
+            <usercontrols:TaskStudentViewUserControl/>
+            <usercontrols:TaskStudentViewUserControl/>
+            <usercontrols:TaskStudentViewUserControl/>
         </StackPanel>
         <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/return.png" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
 
