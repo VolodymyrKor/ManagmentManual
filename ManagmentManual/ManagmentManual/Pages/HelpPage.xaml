@@ -5,10 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="300" d:DesignWidth="300"
       Title="HelpPage">
+    <Page.Resources>
+        <ImageBrush x:Key="backimg" 
+                    Stretch="UniformToFill"
+                    
+                    ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
+    </Page.Resources>
+    <Grid Background="{StaticResource ResourceKey=backimg}">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+                <Button Margin="20,5,5,5"
+                            Name="BackBtn"
+                            Click="BackBtn_Click">
 
-    <Grid>
-        
+                    <materialDesign:PackIcon Kind="ArrowLeft" Height="20" Width="20"/>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Light"
+                   Text="Help Section to be implemented in future versions."/>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Light"
+                   Text="Delayed due to low priority for now."/>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Light"
+                   Text="We appologize for inconvenience."/>
+        </StackPanel>
     </Grid>
 </Page>
