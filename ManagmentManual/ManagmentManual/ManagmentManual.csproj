@@ -101,6 +101,9 @@
     <Compile Include="Pages\HelpPage.xaml.cs">
       <DependentUpon>HelpPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProjectCreatingPage.xaml.cs">
+      <DependentUpon>ProjectCreatingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,9 @@
     </Compile>
     <Compile Include="UserControls\ProjectControl.xaml.cs">
       <DependentUpon>ProjectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskAddingUserControl.xaml.cs">
+      <DependentUpon>TaskAddingUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TaskExpertViewUserControl.xaml.cs">
       <DependentUpon>TaskExpertViewUserControl.xaml</DependentUpon>
@@ -201,6 +207,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ProjectCreatingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -228,6 +238,10 @@
     <Page Include="UserControls\ProjectControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskAddingUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\TaskExpertViewUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -282,6 +296,7 @@
     <Resource Include="AddResourses\logout-xxl.png" />
     <Resource Include="AddResourses\plus.png" />
     <Resource Include="AddResourses\return.png" />
+    <Resource Include="AddResourses\save.png" />
     <Content Include="ManagmentManualDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManagmentManualDB.edmx</DependentUpon>

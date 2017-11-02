@@ -16,25 +16,32 @@ using System.Windows.Shapes;
 namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Interaction logic for StartExpertPage.xaml
+    /// Логика взаимодействия для ProjectCreatingPage.xaml
     /// </summary>
-    public partial class StartExpertPage : Page
+    public partial class ProjectCreatingPage : Page
     {
-        public StartExpertPage()
+        public ProjectCreatingPage()
         {
             InitializeComponent();
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e) //exit
         {
             var service = NavigationService.GetNavigationService(this);
             service.Navigate(new LoginPage());
+
         }
 
-        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e) //savng the results
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new ProjectCreatingPage());
+            service.Navigate(new StartExpertPage());
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e) //get back
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new StartExpertPage());
         }
     }
 }
