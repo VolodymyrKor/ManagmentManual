@@ -29,5 +29,10 @@ namespace ManagmentManual.Pages
         {
 
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
