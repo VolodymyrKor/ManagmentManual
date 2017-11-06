@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ManagmentManual.Models;
+using System.Collections.ObjectModel;
 
 namespace ManagmentManual.ViewModels
 {
@@ -13,6 +14,7 @@ namespace ManagmentManual.ViewModels
         #region
      
         private Person _person = new Person();
+        private ObservableCollection<ProjectViewModel> _projectViewModels = new ObservableCollection<ProjectViewModel>();
 
         #endregion
 
@@ -101,6 +103,23 @@ namespace ManagmentManual.ViewModels
             }
         }
 
+        public string FullName
+        {
+            get => _person.SurName + " " +
+                   _person.Name + " " +
+                   _person.MiddleName;
+        }
+
+        public ObservableCollection<ProjectViewModel> ProjectViewModels
+        {
+            get => _projectViewModels;
+            set
+            {
+                _projectViewModels = value;
+                RaisePropertyChangedEvent("ProjectViewModels");
+            }
+        }
+
         #endregion
 
         // Constructors
@@ -111,6 +130,10 @@ namespace ManagmentManual.ViewModels
         public PersonViewModel(Person person)
         {
             _person = person;
+            foreach(var project in MainWindow.DB_DATA.Projects.Where(project => project.PROJECT_OWNER_ID == _person.PersonID))
+            {
+                ProjectViewModels.Add(new ProjectViewModel(new ProjectModel(project)));
+            }
         }
 
         #endregion

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="ManagmentManual.UserControls.UserControlForExpert"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManagmentManual.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <materialDesign:Card UniformCornerRadius="0" Background="#FF83FF77">
+            <Expander Header="{Binding FullName}" Margin="50 -1 0 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                               Text="{Binding Email}"
+                               HorizontalAlignment="Left"
+                               Margin="30 -20 0 0"
+                               VerticalAlignment="Center"
+                               FontSize="18"
+                               FontWeight="Light"/>
+                    <StackPanel Grid.Row="0"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                Margin="0 -10 20 0">
+                        <Button Margin="5">
+                            <materialDesign:PackIcon Kind="Delete"/>
+                        </Button>
+                    </StackPanel>
+                    <TextBlock Grid.Row="1"
+                               Text="Experts' projects:"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               FontSize="18"
+                               Height="30"
+                               Margin="0 -10 0 0"/>
+                    <StackPanel Grid.Row="1"
+                                Margin="0 10 0 0">
+                        <ItemsControl ItemsSource="{Binding ProjectViewModels}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <usercontrols:UserProjectControl DataContext="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

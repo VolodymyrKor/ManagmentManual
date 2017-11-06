@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagmentManual.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,25 +21,29 @@ namespace ManagmentManual.Pages
     /// </summary>
     public partial class StartAdminPage : Page
     {
+        public AdministratorViewModel AdminDataContext = new AdministratorViewModel() { PersonID = MainWindow.CURRENT_USER_ID };
+
         public StartAdminPage()
         {
+            AdminDataContext.LoadInfo();
+            this.DataContext = AdminDataContext;
             InitializeComponent();
         }
 
         private void ExpertsSection_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ExpertsSection.Width = new GridLength(2, GridUnitType.Star);
-            StudentsSection.Width = new GridLength(0.1, GridUnitType.Star);
-            StudentsScroV.Opacity = 0.5;
-            ExpertsScroV.Opacity = 1;
+            //ExpertsSection.Width = new GridLength(2, GridUnitType.Star);
+            //StudentsSection.Width = new GridLength(0.1, GridUnitType.Star);
+            ////StudentsScroV.Opacity = 0.5;
+            //ExpertsScroV.Opacity = 1;
         }
 
         private void StudentsSection_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ExpertsSection.Width = new GridLength(0.1, GridUnitType.Star);
-            StudentsSection.Width = new GridLength(2, GridUnitType.Star);
-            StudentsScroV.Opacity = 1;
-            ExpertsScroV.Opacity = 0.5;
+            //ExpertsSection.Width = new GridLength(0.1, GridUnitType.Star);
+            //StudentsSection.Width = new GridLength(2, GridUnitType.Star);
+            ////StudentsScroV.Opacity = 1;
+            //ExpertsScroV.Opacity = 0.5;
         }
 
         private void ExpertsSection_PreviewMouseDown(object sender, MouseButtonEventArgs e)

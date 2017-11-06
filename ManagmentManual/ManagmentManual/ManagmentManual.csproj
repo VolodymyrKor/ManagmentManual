@@ -150,8 +150,11 @@
     <Compile Include="User.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\AdminUserControl.xaml.cs">
-      <DependentUpon>AdminUserControl.xaml</DependentUpon>
+    <Compile Include="UserControls\DefaultUserControlForUsers.xaml.cs">
+      <DependentUpon>DefaultUserControlForUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlForExpert.xaml.cs">
+      <DependentUpon>UserControlForExpert.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProjectControl.xaml.cs">
       <DependentUpon>ProjectControl.xaml</DependentUpon>
@@ -170,6 +173,9 @@
     </Compile>
     <Compile Include="UserControls\UserProjectControl.xaml.cs">
       <DependentUpon>UserProjectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserTaskControl.xaml.cs">
+      <DependentUpon>UserTaskControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserType.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
@@ -252,7 +258,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\AdminUserControl.xaml">
+    <Page Include="UserControls\DefaultUserControlForUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlForExpert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -277,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserProjectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserTaskControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

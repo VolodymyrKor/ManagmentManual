@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ManagmentManual.Pages
+namespace ManagmentManual.UserControls
 {
     /// <summary>
-    /// Interaction logic for ResultPage.xaml
+    /// Interaction logic for UserTaskControl.xaml
     /// </summary>
-    public partial class ResultPage : Page
+    public partial class UserTaskControl : UserControl
     {
-        public ResultPage()
+        public UserTaskControl()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }

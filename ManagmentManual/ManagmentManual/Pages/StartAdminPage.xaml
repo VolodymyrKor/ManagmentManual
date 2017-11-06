@@ -39,40 +39,99 @@
     <Grid Background="{StaticResource ResourceKey=backimg}">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Name="ExpertsSection"
-                                  Width="2*"
-                                  />
-                <ColumnDefinition Name="StudentsSection"
-                                  Width="0.1*"
-                                  />
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="4*" Name="UsersSectionColumn"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
-            
-            <ScrollViewer Grid.Column="0"
-                          Name="ExpertsScroV"
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="5*" Name="UsersSectionRow"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Column="2"
+                          Grid.Row="1"
+                          Name="UsersScroV"
                           Style="{StaticResource expand}"
                           Background="Transparent"
                           MouseDown="ExpertsSection_MouseDown"
                           HorizontalScrollBarVisibility="Hidden"
                           VerticalScrollBarVisibility="Auto">
-
-                <StackPanel Name="UsersList">
-                    <usercontrols:AdminUserControl/>
-                    <usercontrols:AdminUserControl/>
-                    <usercontrols:AdminUserControl/>
+                <StackPanel Orientation="Vertical">
+                    <Expander Header="Administrators"
+                              Grid.Row="0"
+                              FontSize="20"
+                              FontWeight="Bold"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Stretch"
+                              Foreground="Black"
+                              Background="#FFD5EAFF"
+                              Margin="0"
+                              Padding="0">
+                        <ItemsControl ItemsSource="{Binding AdminsCollection}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <usercontrols:DefaultUserControlForUsers DataContext="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Expander>
+                    <Expander Header="Experts"
+                              Grid.Row="0"
+                              FontSize="20"
+                              FontWeight="Bold"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Stretch"
+                              Foreground="Black"
+                              Background="#FFD5EAFF"
+                              Margin="0"
+                              Padding="0">
+                        <ItemsControl ItemsSource="{Binding ExpertsCollection}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <usercontrols:UserControlForExpert DataContext="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Expander>
+                    <Expander Header="Students"
+                              Grid.Row="0"
+                              FontSize="20"
+                              FontWeight="Bold"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Stretch"
+                              Foreground="Black"
+                              Background="#FFD5EAFF"
+                              Margin="0"
+                              Padding="0">
+                        <ItemsControl ItemsSource="{Binding StudentsCollection}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <usercontrols:DefaultUserControlForUsers DataContext="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Expander>
                 </StackPanel>
             </ScrollViewer>
-            <ScrollViewer Grid.Column="1"
-                          Name="StudentsScroV"
-                          Style="{StaticResource expand}"
-                          Background="Transparent"
-                          MouseDown="StudentsSection_MouseDown"
-                          VerticalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <usercontrols:AdminUserControl/>
-                    <usercontrols:AdminUserControl/>
-                    <usercontrols:AdminUserControl/>
-                </StackPanel>    
-            </ScrollViewer>
+
+            <Button
+                Grid.Column="2"
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Content="Add new user"
+                Padding="20 10"
+                Height="Auto"
+                FontSize="22">
+            </Button>
+            
         </Grid>
     </Grid>
 </Page>

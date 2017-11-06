@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ManagmentManual.UserControls
 {
     /// <summary>
-    /// Interaction logic for AdminUserControl.xaml
+    /// Interaction logic for UserControlForExpert.xaml
     /// </summary>
-    public partial class AdminUserControl : UserControl
+    public partial class UserControlForExpert : UserControl
     {
-        public AdminUserControl()
+        public UserControlForExpert()
         {
             InitializeComponent();
         }
