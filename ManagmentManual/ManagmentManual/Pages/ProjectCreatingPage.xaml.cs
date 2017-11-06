@@ -43,5 +43,15 @@ namespace ManagmentManual.Pages
             var service = NavigationService.GetNavigationService(this);
             service.Navigate(new StartExpertPage());
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
