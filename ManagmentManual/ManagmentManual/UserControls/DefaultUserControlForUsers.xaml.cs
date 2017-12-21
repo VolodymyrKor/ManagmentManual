@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ManagmentManual.UserControls
 {
     /// <summary>
-    /// Interaction logic for UserProjectControl.xaml
+    /// Interaction logic for DefaultUserControlForUsers.xaml
     /// </summary>
-    public partial class UserProjectControl : UserControl
+    public partial class DefaultUserControlForUsers : UserControl
     {
-        public UserProjectControl()
+        public DefaultUserControlForUsers()
         {
             InitializeComponent();
         }

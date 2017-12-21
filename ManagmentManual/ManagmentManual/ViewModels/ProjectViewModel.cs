@@ -84,6 +84,11 @@ namespace ManagmentManual.ViewModels
             ProjectDescription = pm.ProjectDescription;
             ProjectID = pm.ProjectID;
             ProjectOwnerID = pm.ProjectOwnerID;
+
+            foreach(var task in MainWindow.DB_DATA.Tasks.Where(task => task.TASK_PROJECT_ID == _projectModel.ProjectID))
+            {
+                TaskViewModels.Add(new TaskViewModel(new TaskModel(task)));
+            }
         }
 
         #endregion

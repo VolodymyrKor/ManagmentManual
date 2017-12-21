@@ -69,5 +69,15 @@ namespace ManagmentManual.Services
             }
             return 0;
         }
+
+        public List<Person> GetAllUsers()
+        {
+            var _users = new List<Person>();
+            foreach(var user in MainWindow.DB_DATA.Users)
+            {
+                _users.Add(new Person(user));
+            }
+            return _users;    
+        }
     }
 }

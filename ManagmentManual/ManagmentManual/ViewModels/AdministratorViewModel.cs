@@ -14,8 +14,9 @@ namespace ManagmentManual.ViewModels
         #region Fields
 
         private Person _adminPerson = new Person();
-        private ObservableCollection<PersonViewModel> _usersCollection = new ObservableCollection<PersonViewModel>();
-        private ObservableCollection<ProjectViewModel> _projectsCollection = new ObservableCollection<ProjectViewModel>();
+        private ObservableCollection<PersonViewModel> _adminsCollection = new ObservableCollection<PersonViewModel>();
+        private ObservableCollection<PersonViewModel> _expertsCollection = new ObservableCollection<PersonViewModel>();
+        private ObservableCollection<PersonViewModel> _studentsCollection = new ObservableCollection<PersonViewModel>();
 
         #endregion
 
@@ -82,23 +83,33 @@ namespace ManagmentManual.ViewModels
             }
         }
 
-        public ObservableCollection<PersonViewModel> UsersCollection
+        public ObservableCollection<PersonViewModel> AdminsCollection
         {
-            get => _usersCollection;
+            get => _adminsCollection;
             set
             {
-                _usersCollection = value;
-                RaisePropertyChangedEvent("UsersCollection");
+                _adminsCollection = value;
+                RaisePropertyChangedEvent("AdminsCollection");
             }
         }
 
-        public ObservableCollection<ProjectViewModel> ProjectsCollection
+        public ObservableCollection<PersonViewModel> ExpertsCollection
         {
-            get => _projectsCollection;
+            get => _expertsCollection;
             set
             {
-                _projectsCollection = value;
-                RaisePropertyChangedEvent("ProjectsCollection");
+                _expertsCollection = value;
+                RaisePropertyChangedEvent("ExpertsCollection");
+            }
+        }
+
+        public ObservableCollection<PersonViewModel> StudentsCollection
+        {
+            get => _studentsCollection;
+            set
+            {
+                _studentsCollection = value;
+                RaisePropertyChangedEvent("StudentsCollection");
             }
         }
 
@@ -111,6 +122,25 @@ namespace ManagmentManual.ViewModels
 
         // Functions
         #region Functions
+
+        public void LoadInfo()
+        {
+            foreach (var user in MainWindow.USER_SERVICE.GetAllUsers())
+            {
+                switch(user.PersonType)
+                {
+                    case PersonTypes.Administrator:
+                        AdminsCollection.Add(new PersonViewModel(user));
+                        break;
+                    case PersonTypes.Expert:
+                        ExpertsCollection.Add(new PersonViewModel(user));
+                        break;
+                    case PersonTypes.Student:
+                        StudentsCollection.Add(new PersonViewModel(user));
+                        break;
+                }
+            }
+        }
 
         #endregion
     }
