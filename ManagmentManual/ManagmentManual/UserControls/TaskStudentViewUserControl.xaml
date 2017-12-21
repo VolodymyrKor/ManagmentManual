@@ -7,12 +7,55 @@
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignWidth="800" Height="80">
-    <materialDesign:Card Margin="5">
-        <Grid Background="#FFFAFAFA" Height="70">
-            <TextBlock x:Name="TaskDescriptionLbl" FontSize="18" HorizontalAlignment="Left" Margin="20,18,0,0" TextWrapping="Wrap" Text="This is task number1" VerticalAlignment="Top" Width="432"/>
-            <TextBox Width="60" x:Name="TimeTextBox" FontSize="18" HorizontalAlignment="Left" Margin="508,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.017,0.494"/>
-            <TextBox Width="60" x:Name="PriorityTextBox"  FontSize="18" HorizontalAlignment="Left" Margin="602,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.277,0.916"/>
-            <TextBox Width="60" x:Name="ComplexityTextBox"  FontSize="18" HorizontalAlignment="Left" Margin="695,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.247,0.321"/>
+    <materialDesign:Card Margin="5"
+                         Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                     Text="Task description"
+                     FontSize="22"
+                     FontWeight="Light"
+                     Name="TaskDescrTextBox"
+                     Margin="10,0,0,0"
+                     VerticalAlignment="Center"
+                     TextWrapping="Wrap"/>
+            <StackPanel Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Time %"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <TextBox FontSize="20"
+                         TextAlignment="Center"
+                         MaxLength="2"
+                         Name="TimeTextBox"
+                         FontWeight="Light"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Priority"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <materialDesign:RatingBar
+                    Name="PriorityRating"/>
+            </StackPanel>
+            <StackPanel Grid.Column="3"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Complexity"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <materialDesign:RatingBar Name="ComplexityRating"/>
+            </StackPanel>
         </Grid>
     </materialDesign:Card>
 </UserControl>
