@@ -32,11 +32,7 @@
             <Label x:Name="TestHeadingLbl"  Content="Test Heading" FontSize="24" HorizontalAlignment="Center"/>
             <TextBlock x:Name="TestDescription" Text="Software testing is an investigation conducted to provide stakeholders with information about the quality of the software product or service under test.[1] Software testing can also provide an objective, independent view of the software to allow the business to appreciate and understand the risks of software implementation. " FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,0 0 20" VerticalAlignment="Top" RenderTransformOrigin="1.132,0.231"/>
             <Label Content="Task                                                                                             Time  Priority  Complexity     " Margin="20,0,35,0" FontSize="20" RenderTransformOrigin="0.065,1.462"/>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
-            <usercontrols:TaskExpertViewUserControl></usercontrols:TaskExpertViewUserControl>
+            
         </StackPanel>
         <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/return.png" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
 

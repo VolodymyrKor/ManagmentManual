@@ -4,7 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
-      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"      
+      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"    
+      xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="650" d:DesignWidth="1350"
       Title="StartStudentPage">
@@ -12,37 +13,98 @@
         <ImageBrush x:Key="backimg" Stretch="UniformToFill" ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
     </Page.Resources>
     <Grid Background="{StaticResource ResourceKey=backimg}" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <TextBlock  Text=" You are logged in as Name.S "
-                    FontStyle="Oblique"
-                    x:Name="UserNameLbl"
-                     Foreground="White"
-                    TextAlignment="Left"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="20" Height="42"  Width="330" Margin="44,49,67,0" RenderTransformOrigin="0.924,0.524" Grid.Column="2"   
-                           />
-        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="367,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1" />
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2" Grid.Column="1"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="3" Grid.Column="1"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1"  Grid.Column="1"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1" Grid.Column="2"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2" Grid.Column="2"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="1"  Grid.Column="2"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="2"/>
-        <usercontrols:ProjectForStudentControl Margin="10" Grid.Row="3"/>
-        <Label Content="Projects" Foreground="white" FontSize="30" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Grid VerticalAlignment="Top"
+              Background="#60000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Margin="20,10,10,10"
+                    HorizontalAlignment="Left"
+                    Name="BackBtn"
+                    Click="BackBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <material:PackIcon Kind="ArrowLeftBold" 
+                                       Height="20"
+                                       Width="20"/>
+                    <TextBlock Text="Back"/>
+                </StackPanel>
+            </Button>
+            <!--Heading-->
+            <TextBlock Grid.Column="1"
+                       Text="Avaliable tests"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="44"
+                       FontWeight="Light"
+                       Margin="10"/>
+            <!--User info + logout-->
+            <StackPanel Grid.Column="2"
+                        Margin="10"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Logged as: "
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Light"/>
+                <!--This may be clickable and redirect to user's page if needed-->
+                <TextBlock Text="Hoozuki-san"
+                           FontSize="24"
+                           FontWeight="Light"
+                           FontStyle="Italic"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Name="UserNameTextBlock"
+                           MouseDown="UserNameTextBlock_MouseDown"
+                           Cursor="Hand"
+                           TextDecorations="Underline"/>
+                <Thumb Background="Black"
+                       Width="2"
+                       Margin="10,-5,10,-5"/>
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout"/>
+                        <material:PackIcon Kind="Logout"
+                                           Height="20"
+                                           Width="20"
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <ScrollViewer Margin="5,100,5,5" 
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Auto"
+                      >
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl/>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 
 </Page>

@@ -39,7 +39,12 @@ namespace ManagmentManual
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if(EmailTextBox.Text == "student")
+                NavigationService?.Navigate(new StartStudentPage());
+            else if(EmailTextBox.Text == "expert")
+                NavigationService?.Navigate(new StartExpertPage());
+            //no need for that, we'll handle it later(no) after demo
+            /*try
             {
                 var userType = MainWindow.AUTHORIZATION_SERVICE.LogIn(EmailTextBox.Text, PassTextBox.Text);
 
@@ -57,7 +62,7 @@ namespace ManagmentManual
                          break;
                      default:
                          throw new Exception("Unknown user type!");
-                 }*/
+                 }
                 nextPage = new StartStudentPage();
                 NavigationService?.Navigate(nextPage);
             }
@@ -65,7 +70,7 @@ namespace ManagmentManual
             {
                 // Todo [VK]: create cool design for any problems
                 MessageBox.Show("Smth went wrong! " + exception.Message, "Error");
-            }
+            }*/
         }
 
         private void RegisterBtn_MouseDown(object sender, MouseButtonEventArgs e)

@@ -7,24 +7,36 @@
              mc:Ignorable="d" 
               xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignHeight="190" d:DesignWidth="440"
+             Margin="10"
             
              >
-    <materialDesign:Card Margin="5">
-        <Grid Opacity="0.9" Height="180" Background="#FFFAFAFA" >
-            <Label  Content="Test Heading" FontSize="24" HorizontalAlignment="Left" Margin="141,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.635,-1.012"/>
-            <Label Content="This is a tiny test description........" FontSize="14" HorizontalAlignment="Left" Margin="35,52,0,0" VerticalAlignment="Top"/>
-            <Button MaxWidth="100" Name="DeleteButton"
-                        HorizontalAlignment="Right" Margin="0,112,26,36">
-                <materialDesign:PackIcon Kind="Delete"/>
-            </Button>
-            <Button MaxWidth="100" Name="ShowButton"
-                        HorizontalAlignment="Right" Margin="0,112,85,36">
-                <materialDesign:PackIcon Kind="Eye"/>
-            </Button>
-            <Label Opacity="0.6" Content="Creation Date" FontSize="12" HorizontalAlignment="Left" Margin="35,118,0,0" VerticalAlignment="Top"/>
-            <Label Opacity="0.6" Content="Times passed" FontSize="12" HorizontalAlignment="Left" Margin="35,100,0,0" VerticalAlignment="Top"/>
-            <Label Opacity="0.6" Content="1.10.2017" FontSize="12" HorizontalAlignment="Left" Margin="123,118,0,0" VerticalAlignment="Top"/>
-            <Label Opacity="0.6" Content="88" FontSize="12" HorizontalAlignment="Left" Margin="123,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.13,0.494"/>
-        </Grid>
+    <materialDesign:Card Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Text="Test 'Teamwork' "
+                       Margin="10"
+                       TextAlignment="Center"
+                       FontSize="34"
+                       FontWeight="Light"/>
+            <TextBlock Text="A tiny description goes here about how our project survived..." 
+                           FontWeight="Light"
+                           MaxWidth="300"
+                           TextWrapping="Wrap"
+                           MaxHeight="200"
+                           Margin="15"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="5">
+                        
+                <Button Content="Delete" 
+                        FontWeight="Light"
+                        Margin="5"/>
+                <Button Content="Edit" 
+                        FontWeight="Light"
+                        Margin="5"/>
+            </StackPanel>
+        </StackPanel>
     </materialDesign:Card>
 </UserControl>

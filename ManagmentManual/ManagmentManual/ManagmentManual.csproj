@@ -162,9 +162,6 @@
     <Compile Include="UserControls\TaskAddingUserControl.xaml.cs">
       <DependentUpon>TaskAddingUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TaskExpertViewUserControl.xaml.cs">
-      <DependentUpon>TaskExpertViewUserControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\TaskStudentViewUserControl.xaml.cs">
       <DependentUpon>TaskStudentViewUserControl.xaml</DependentUpon>
     </Compile>
@@ -267,10 +264,6 @@
     <Page Include="UserControls\TaskAddingUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\TaskExpertViewUserControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\TaskStudentViewUserControl.xaml">
       <SubType>Designer</SubType>

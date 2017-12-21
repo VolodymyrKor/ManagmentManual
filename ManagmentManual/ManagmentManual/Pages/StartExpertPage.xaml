@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
       xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
+      xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
      d:DesignHeight="650" d:DesignWidth="1350 "
       Title="StartExpertPage">
@@ -16,39 +17,125 @@
     </Page.Resources>
 
     <Grid Background="{StaticResource ResourceKey=backimg}" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="290"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-            <ColumnDefinition Width="450"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <TextBlock  Text=" You are logged in as Name.S "
-                    FontStyle="Oblique"
-                    x:Name="UserNameLbl"
-                     Foreground="White"
-                    TextAlignment="Left"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="20" Height="42"  Width="330" Margin="44,49,67,0" RenderTransformOrigin="0.924,0.524" Grid.Column="2"   
-                           />
-        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="376,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="1" />
-        <usercontrols:ProjectControl Margin="10" Grid.Row="2" Grid.Column="1"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="3" Grid.Column="1"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="1"  Grid.Column="1"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="1" Grid.Column="2"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="2" Grid.Column="2"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="1"  Grid.Column="2"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="2"/>
-        <usercontrols:ProjectControl Margin="10" Grid.Row="3"/>
-        <Image MouseDown="Image_MouseDown_1" Source="pack://application:,,,/ManagmentManual;component/AddResourses/plus.png" HorizontalAlignment="Left" Height="64" Margin="193,66,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.266,0.716" Grid.Column="2" Grid.Row="3"/>
-        <Label Content="Click to add project" Foreground="white" FontSize="18" Grid.Column="2" HorizontalAlignment="Left" Margin="148,135,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Label Content="Your projects" Foreground="white" FontSize="30" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Grid VerticalAlignment="Top"
+              Background="#60000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Margin="20,10,10,10"
+                    HorizontalAlignment="Left"
+                    Name="BackBtn"
+                    Click="BackBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <material:PackIcon Kind="ArrowLeftBold" 
+                                       Height="20"
+                                       Width="20"/>
+                    <TextBlock Text="Back"/>
+                </StackPanel>
+            </Button>
+            <!--Heading-->
+            <TextBlock Grid.Column="1"
+                       Text="My tests"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="44"
+                       FontWeight="Light"
+                       Margin="10"/>
+            <!--User info + logout-->
+            <StackPanel Grid.Column="2"
+                        Margin="10"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Logged as: "
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Light"/>
+                <!--This may be clickable and redirect to user's page if needed-->
+                <TextBlock Text="Hoozuki-san"
+                           FontSize="24"
+                           FontWeight="Light"
+                           FontStyle="Italic"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Name="UserNameTextBlock"
+                           MouseDown="UserNameTextBlock_MouseDown"
+                           Cursor="Hand"
+                           TextDecorations="Underline"/>
+                <Thumb Background="Black"
+                       Width="2"
+                       Margin="10,-5,10,-5"/>
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout"/>
+                        <material:PackIcon Kind="Logout"
+                                           Height="20"
+                                           Width="20"
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <ScrollViewer Margin="5,100,5,5" 
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Auto"
+                      >
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+                    <usercontrols:ProjectControl/>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Margin="50"
+                Height="Auto"
+                Width="Auto"
+                VerticalAlignment="Bottom"
+                Name="CreateNewButton"
+                Click="CreateNewButton_Click"
+                HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <material:PackIcon Kind="PlusCircle"
+                                   VerticalAlignment="Center"
+                                   Height="50"
+                                   Width="50"
+                                   Margin="5"/>
+            </StackPanel>
+        </Button>
     </Grid>
 
 </Page>
