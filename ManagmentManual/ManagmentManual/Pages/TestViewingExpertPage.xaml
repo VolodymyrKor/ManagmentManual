@@ -205,6 +205,8 @@
                 HorizontalAlignment="Right"
                 Margin="0,0,100,50"
                 MinHeight="50"
+                Name="SaveBtn"
+                Click="SaveBtn_Click"
                 MinWidth="150">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Save "

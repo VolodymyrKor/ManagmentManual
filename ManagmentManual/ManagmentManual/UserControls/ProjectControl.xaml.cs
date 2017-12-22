@@ -36,7 +36,11 @@ namespace ManagmentManual.UserControls
             service.Navigate(new TestViewingExpertPage());
         }
 
-        
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new TestViewingExpertPage());
+        }
     }
     }
 

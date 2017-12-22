@@ -21,12 +21,12 @@ namespace ManagmentManual.Pages
     /// </summary>
     public partial class StartAdminPage : Page
     {
-        public AdministratorViewModel AdminDataContext = new AdministratorViewModel() { PersonID = MainWindow.CURRENT_USER_ID };
+        //public AdministratorViewModel AdminDataContext = new AdministratorViewModel() { PersonID = MainWindow.CURRENT_USER_ID };
 
         public StartAdminPage()
         {
-            AdminDataContext.LoadInfo();
-            this.DataContext = AdminDataContext;
+            //AdminDataContext.LoadInfo();
+            //this.DataContext = AdminDataContext;
             InitializeComponent();
         }
 
@@ -49,6 +49,18 @@ namespace ManagmentManual.Pages
         private void ExpertsSection_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
+        }
+
+        private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
         }
     }
 }

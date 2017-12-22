@@ -34,6 +34,8 @@
                         FontWeight="Light"
                         Margin="5"/>
                 <Button Content="Edit" 
+                        Name="EditBtn"
+                        Click="EditBtn_Click"
                         FontWeight="Light"
                         Margin="5"/>
             </StackPanel>

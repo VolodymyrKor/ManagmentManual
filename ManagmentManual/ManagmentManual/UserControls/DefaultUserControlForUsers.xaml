@@ -8,14 +8,16 @@
              mc:Ignorable="d">
     <Grid>
         <materialDesign:Card UniformCornerRadius="0" Background="#FF83FF77">
-            <Expander Header="{Binding FullName}" Margin="50 -1 0 0">
+            <Expander Header="Username" Margin="50 -1 0 0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0">
                         <Grid>
-                            <TextBlock Text="{Binding Email}"
+                            <!--we'll fix it
+                            <TextBlock Text="{Binding Email}"-->
+                            <TextBlock Text="email"
                                    HorizontalAlignment="Left"
                                    Margin="30 0 0 0"
                                    VerticalAlignment="Center"

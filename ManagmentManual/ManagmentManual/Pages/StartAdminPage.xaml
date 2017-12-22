@@ -15,28 +15,76 @@
                     Stretch="UniformToFill"
                     
                     ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
-        <Style TargetType="ScrollViewer" x:Key="expand">
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <ScaleTransform ScaleX="1"/>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="Width" Value="100">
-                    <Trigger.EnterActions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     From="0"
-                                                     Duration="0:00:01"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </Trigger.EnterActions>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        
     </Page.Resources>
     <Grid Background="{StaticResource ResourceKey=backimg}">
+        <!--Top Bar Grid-->
+        <Grid VerticalAlignment="Top"
+              Background="#60000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Margin="20,10,10,10"
+                    HorizontalAlignment="Left"
+                    Name="BackBtn"
+                    Click="BackBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ArrowLeftBold" 
+                                       Height="20"
+                                       Width="20"/>
+                    <TextBlock Text="Back"/>
+                </StackPanel>
+            </Button>
+            <!--Heading-->
+            <TextBlock Grid.Column="1"
+                       Text="User Management"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="44"
+                       FontWeight="Light"
+                       Margin="10"/>
+            <!--User info + logout-->
+            <StackPanel Grid.Column="2"
+                        Margin="10"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Logged as: "
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Light"/>
+                <!--This may be clickable and redirect to user's page if needed-->
+                <TextBlock Text="Hoozuki-san"
+                           FontSize="24"
+                           FontWeight="Light"
+                           FontStyle="Italic"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Name="UserNameTextBlock"
+                           MouseDown="UserNameTextBlock_MouseDown"
+                           Cursor="Hand"
+                           TextDecorations="Underline"/>
+                <Thumb Background="Black"
+                       Width="2"
+                       Margin="10,-5,10,-5"/>
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout"/>
+                        <materialDesign:PackIcon Kind="Logout"
+                                           Height="20"
+                                           Width="20"
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
@@ -54,9 +102,10 @@
             </Grid.RowDefinitions>
 
             <ScrollViewer Grid.Column="2"
+                          Margin="0,50,0,0"
                           Grid.Row="1"
                           Name="UsersScroV"
-                          Style="{StaticResource expand}"
+                          
                           Background="Transparent"
                           MouseDown="ExpertsSection_MouseDown"
                           HorizontalScrollBarVisibility="Hidden"
@@ -72,13 +121,22 @@
                               Background="#FFD5EAFF"
                               Margin="0"
                               Padding="0">
+                        <!--to be updated 
                         <ItemsControl ItemsSource="{Binding AdminsCollection}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <usercontrols:DefaultUserControlForUsers DataContext="{Binding}"/>
+                                    <usercontrols:DefaultUserControlForUsers/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                        </ItemsControl>-->
+                        <StackPanel>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                        </StackPanel>
                     </Expander>
                     <Expander Header="Experts"
                               Grid.Row="0"
@@ -90,13 +148,21 @@
                               Background="#FFD5EAFF"
                               Margin="0"
                               Padding="0">
-                        <ItemsControl ItemsSource="{Binding ExpertsCollection}">
+                        <!--><ItemsControl ItemsSource="{Binding ExpertsCollection}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <usercontrols:UserControlForExpert DataContext="{Binding}"/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                        </ItemsControl>-->
+                        <StackPanel>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                        </StackPanel>
                     </Expander>
                     <Expander Header="Students"
                               Grid.Row="0"
@@ -108,13 +174,21 @@
                               Background="#FFD5EAFF"
                               Margin="0"
                               Padding="0">
-                        <ItemsControl ItemsSource="{Binding StudentsCollection}">
+                        <!--<ItemsControl ItemsSource="{Binding StudentsCollection}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <usercontrols:DefaultUserControlForUsers DataContext="{Binding}"/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                        </ItemsControl>-->
+                        <StackPanel>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers/>
+                        </StackPanel>
                     </Expander>
                 </StackPanel>
             </ScrollViewer>
