@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
      xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"     
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="650" d:DesignWidth="1350"
       Title="ResultPage">
@@ -13,22 +13,99 @@
         <ImageBrush x:Key="backimg" Stretch="UniformToFill" ImageSource="pack://application:,,,/ManagmentManual;component/AddResourses/bcg.png" />
     </Page.Resources>
     <Grid Background="{StaticResource ResourceKey=backimg}" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="600"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-            <ColumnDefinition Width="750"></ColumnDefinition>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="367,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716" Grid.Column="2"/>
-        <materialDesign:Card Margin="5" Grid.Column="1" Grid.Row="1">
+        <Grid VerticalAlignment="Top"
+              Background="#60000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Margin="20,10,10,10"
+                    HorizontalAlignment="Left"
+                    Name="BackBtn"
+                    Click="BackBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <material:PackIcon Kind="ArrowLeftBold" 
+                                       Height="20"
+                                       Width="20"/>
+                    <TextBlock Text="Back"/>
+                </StackPanel>
+            </Button>
+            <!--Heading-->
+            <TextBlock Grid.Column="1"
+                       Text="Congrats!"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="44"
+                       FontWeight="Light"
+                       Margin="10"/>
+            <!--User info + logout-->
+            <StackPanel Grid.Column="2"
+                        Margin="10"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Logged as: "
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Light"/>
+                <!--This may be clickable and redirect to user's page if needed-->
+                <TextBlock Text="Hoozuki-san"
+                           FontSize="24"
+                           FontWeight="Light"
+                           FontStyle="Italic"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Name="UserNameTextBlock"
+                           MouseDown="UserNameTextBlock_MouseDown"
+                           Cursor="Hand"
+                           TextDecorations="Underline"/>
+                <Thumb Background="Black"
+                       Width="2"
+                       Margin="10,-5,10,-5"/>
+                <Button Name="LogoutBtn"
+                        Click="LogoutBtn_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout"/>
+                        <material:PackIcon Kind="Logout"
+                                           Height="20"
+                                           Width="20"
+                                          
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <!--not my code below, it's 2:08, no time to fix-->
+        <material:Card Margin="5"
+                       HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
             <Grid Height="400">
-                <TextBlock Text="Your Result" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="28" Margin="282,34,282,310" Foreground="#FFB9B9B9"/>
-                <TextBlock Text="23/40" HorizontalAlignment="Center" FontWeight="Bold" FontSize="48" Margin="0,119,0,229"/>
-                <Button Width="200" MaxWidth="100" HorizontalAlignment="Center" Content="Back to Tests" Margin="265,288,265,80" Click="Button_Click" MinWidth="200"/>
+                <TextBlock Text="Your Result" 
+                           FontWeight="SemiBold" 
+                           HorizontalAlignment="Center" 
+                           FontSize="28" 
+                           Margin="282,34,282,310" 
+                           Foreground="#FFB9B9B9"/>
+                <TextBlock Text="23/40" 
+                           HorizontalAlignment="Center" 
+                           FontWeight="Bold" 
+                           FontSize="48" 
+                           Margin="0,119,0,229"/>
+                <Button Width="200" 
+                        MaxWidth="100" 
+                        HorizontalAlignment="Center" 
+                        Content="Back to Tests" 
+                        Margin="265,288,265,80" 
+                        Name="ReturnToTestsBtn" 
+                        Click="ReturnToTestsBtn_Click" 
+                        MinWidth="200"/>
             </Grid>
-        </materialDesign:Card>
+        </material:Card>
     </Grid>
 </Page>

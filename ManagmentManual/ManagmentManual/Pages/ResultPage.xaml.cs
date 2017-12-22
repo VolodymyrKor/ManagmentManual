@@ -34,5 +34,28 @@ namespace ManagmentManual.Pages
         {
 
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
+        }
+
+        private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ReturnToTestsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new StartStudentPage());
+        }
+
+        private void LogoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
+        }
     }
 }

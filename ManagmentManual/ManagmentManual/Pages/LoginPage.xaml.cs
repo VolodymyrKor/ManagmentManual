@@ -43,6 +43,8 @@ namespace ManagmentManual
                 NavigationService?.Navigate(new StartStudentPage());
             else if(EmailTextBox.Text == "expert")
                 NavigationService?.Navigate(new StartExpertPage());
+            else if (EmailTextBox.Text == "admin")
+                NavigationService?.Navigate(new StartAdminPage());
             //no need for that, we'll handle it later(no) after demo
             /*try
             {
@@ -62,7 +64,7 @@ namespace ManagmentManual
                          break;
                      default:
                          throw new Exception("Unknown user type!");
-                 }*/
+                 }
                 nextPage = new StartStudentPage();
                 NavigationService?.Navigate(nextPage);
             }

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManagmentManual.Pages"
       mc:Ignorable="d" 
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="650" d:DesignWidth="1350 "
             xmlns:usercontrols="clr-namespace:ManagmentManual.UserControls"
       Title="TestViewingExpertPage">
@@ -18,23 +18,204 @@
     </Page.Resources>
 
     <Grid Background="{StaticResource ResourceKey=backimg}">
-        <TextBlock  Text=" You are logged in as Name.S "
-                    FontStyle="Oblique"
-                    
-                     Foreground="White"
-                    TextAlignment="Left"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="20" Height="42"  Width="330" Margin="931,38,89,0" RenderTransformOrigin="0.924,0.524"   
-                           />
-        <Image Source="pack://application:,,,/ManagmentManual;component/AddResourses/logout-xxl.png" HorizontalAlignment="Left" Height="48" Margin="1261,42,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.266,0.716"/>
-        <StackPanel Background="#E5E4E2" HorizontalAlignment="Left" Height="503" Margin="246,85,0,0" VerticalAlignment="Top" Width="843">
-            <Label x:Name="TestHeadingLbl"  Content="Test Heading" FontSize="24" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="TestDescription" Text="Software testing is an investigation conducted to provide stakeholders with information about the quality of the software product or service under test.[1] Software testing can also provide an objective, independent view of the software to allow the business to appreciate and understand the risks of software implementation. " FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,0 0 20" VerticalAlignment="Top" RenderTransformOrigin="1.132,0.231"/>
-            <Label Content="Task                                                                                             Time  Priority  Complexity     " Margin="20,0,35,0" FontSize="20" RenderTransformOrigin="0.065,1.462"/>
-            
-        </StackPanel>
-        <Image MouseDown="Image_MouseDown" Source="pack://application:,,,/ManagmentManual;component/AddResourses/return.png" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
+        <!--Top Bar Grid-->
+        <Grid VerticalAlignment="Top"
+              Background="#60000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+            <Button Grid.Column="0"
+                    Margin="20,10,10,10"
+                    HorizontalAlignment="Left"
+                    Name="BackBtn"
+                    Click="BackBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <material:PackIcon Kind="ArrowLeftBold" 
+                                       Height="20"
+                                       Width="20"/>
+                    <TextBlock Text="Back"/>
+                </StackPanel>
+            </Button>
+            <!--Heading-->
+            <TextBlock Grid.Column="1"
+                       Text="Edit Test"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="44"
+                       FontWeight="Light"
+                       Margin="10"/>
+            <!--User info + logout-->
+            <StackPanel Grid.Column="2"
+                        Margin="10"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Logged as: "
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontWeight="Light"/>
+                <!--This may be clickable and redirect to user's page if needed-->
+                <TextBlock Text="Hoozuki-san"
+                           FontSize="24"
+                           FontWeight="Light"
+                           FontStyle="Italic"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Name="UserNameTextBlock"
+                           MouseDown="UserNameTextBlock_MouseDown"
+                           Cursor="Hand"
+                           TextDecorations="Underline"/>
+                <Thumb Background="Black"
+                       Width="2"
+                       Margin="10,-5,10,-5"/>
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout"/>
+                        <material:PackIcon Kind="Logout"
+                                           Height="20"
+                                           Width="20"
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <!--Body-->
+        <StackPanel VerticalAlignment="Center"
+              Margin="100,10,100,10">
+            <material:Card Padding="10"
+                           UniformCornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0"
+                               Text="Test Title"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Foreground="Black"
+                               FontSize="44"
+                               FontWeight="Light"/>
+                    <TextBox Grid.Column="1"
+                             VerticalAlignment="Center"
+                             Foreground="Black"
+                             FontSize="44"
+                             FontWeight="Light"/>
+                </Grid>
+            </material:Card>
+            <Thumb Background="LightGray"
+                   Height="2"
+                   Margin="0,10,0,10"/>
+            <material:Card Padding="10"
+                           UniformCornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                           Grid.Row="1"
+                           Text="Description"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Foreground="Black"
+                           FontSize="44"
+                           FontWeight="Light"/>
+                    <TextBox Grid.Column="1"
+                         VerticalAlignment="Center"
+                         Foreground="Black"
+                         TextWrapping="Wrap"
+                         FontSize="44"
+                         FontWeight="Light"/>
+                </Grid>
+            </material:Card>
+            <Thumb Background="LightGray"
+                   Height="2"
+                   Margin="0,10,0,10"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"
+                            VerticalAlignment="Center">
+                    <TextBlock 
+                               Text="Tasks"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Foreground="White"
+                               FontSize="44"
+                               FontWeight="Light"/>
+                    <Button Grid.Column="0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        MinHeight="50">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="New Task "
+                                   FontSize="24"
+                                   VerticalAlignment="Center"
+                                   FontWeight="Light"/>
+                            <material:PackIcon Kind="PlusCircle"
+                                           Height="24"
+                                           VerticalAlignment="Center"
+                                           Width="24"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+
+                <ScrollViewer Grid.Column="1"
+                              MaxHeight="300">
+                    <StackPanel>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                        <usercontrols:TaskAddingUserControl/>
+                    </StackPanel>
+                </ScrollViewer>
+                <!--URGENT!!!!! PLS unkomment this code and use it, actual stackpanel one is just for design -->
+                <!--<ItemsControl ItemsSource="{Binding ProjectViewModels}"
+                              Grid.Column="1">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <usercontrols:TaskAddingUserControl DataContext="{Binding}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                -->
+
+            </Grid>
+            <Thumb Background="LightGray"
+                   Height="2"
+                   Margin="0,10,0,10"/>
+        </StackPanel>
+        <Button VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,100,50"
+                MinHeight="50"
+                MinWidth="150">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Save "
+                                   FontSize="24"
+                                   VerticalAlignment="Center"
+                                   FontWeight="Light"/>
+                <material:PackIcon Kind="ContentSaveAll"
+                                           Height="24"
+                                           VerticalAlignment="Center"
+                                           Width="24"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>
