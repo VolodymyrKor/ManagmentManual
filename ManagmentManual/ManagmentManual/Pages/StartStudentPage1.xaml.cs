@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Interaction logic for TestViewingStudentPage.xaml
+    /// Interaction logic for StartStudentPage.xaml
     /// </summary>
-    public partial class TestViewingStudentPage : Page
+    public partial class StartStudentPage1 : Page
     {
-        public TestViewingStudentPage()
+        public StartStudentPage1()
         {
             InitializeComponent();
         }
@@ -28,17 +28,10 @@ namespace ManagmentManual.Pages
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new StartExpertPage());
+            service.Navigate(new LoginPage());
         }
 
-        private void SubmitBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
-            var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new ResultPage());
-        }
-
-        private void LogoutBtn_Click(object sender, RoutedEventArgs e)
+        private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
             service.Navigate(new LoginPage());
@@ -47,12 +40,7 @@ namespace ManagmentManual.Pages
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new StartStudentPage());
-        }
-
-        private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
+            service.Navigate(new LoginPage());
         }
     }
 }

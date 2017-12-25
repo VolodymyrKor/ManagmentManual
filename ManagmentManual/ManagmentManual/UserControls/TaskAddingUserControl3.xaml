@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="ManagmentManual.UserControls.TaskAddingUserControl3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManagmentManual.UserControls"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="956"
+             >
+    <materialDesign:Card Margin="5"
+                         Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0"
+                     Text="Implementation"
+                     FontSize="22"
+                     FontWeight="Light"
+                     Name="TaskDescrTextBox"
+                     Margin="10,0,0,0"
+                     VerticalAlignment="Center"
+                     TextWrapping="Wrap"/>
+            <StackPanel Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Time %"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <TextBox FontSize="20"
+                         TextAlignment="Center"
+                         MaxLength="2"
+                         Name="TimeTextBox"
+                         FontWeight="Light"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Priority"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <materialDesign:RatingBar
+                    Name="PriorityRating"/>
+            </StackPanel>
+            <StackPanel Grid.Column="3"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Complexity"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           FontWeight="Light"/>
+                <materialDesign:RatingBar Name="ComplexityRating"/>
+            </StackPanel>
+        </Grid>
+    </materialDesign:Card>
+</UserControl>

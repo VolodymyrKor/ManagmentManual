@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ManagmentManual.UserControls.DefaultUserControlForUsers1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManagmentManual.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+    <Grid>
+        <materialDesign:Card UniformCornerRadius="0" Background="#FF83FF77">
+            <Expander Header="Username" Margin="50 -1 0 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0">
+                        <Grid>
+                            <!--we'll fix it
+                            <TextBlock Text="{Binding Email}"-->
+                            <TextBlock Text="email"
+                                   HorizontalAlignment="Left"
+                                   Margin="30 0 0 0"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"/>
+                            <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 20 0">
+                                <Button Margin="5">
+                                    <materialDesign:PackIcon Kind="Delete"/>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Expander>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

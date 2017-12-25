@@ -157,7 +157,7 @@
                         </ItemsControl>-->
                         <StackPanel>
                             <usercontrols:DefaultUserControlForUsers/>
-                            <usercontrols:DefaultUserControlForUsers/>
+                            <usercontrols:DefaultUserControlForUsers1/>
                             <usercontrols:DefaultUserControlForUsers/>
                             <usercontrols:DefaultUserControlForUsers/>
                             <usercontrols:DefaultUserControlForUsers/>

@@ -87,7 +87,13 @@
                         HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl1/>
+                    <!--<usercontrols:ProjectForStudentControl/>-->
+
+                </StackPanel><!--
+                <StackPanel Orientation="Horizontal">
                     <usercontrols:ProjectForStudentControl/>
+                    <usercontrols:ProjectForStudentControl1/>
                     <usercontrols:ProjectForStudentControl/>
 
                 </StackPanel>
@@ -97,12 +103,7 @@
                     <usercontrols:ProjectForStudentControl/>
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <usercontrols:ProjectForStudentControl/>
-                    <usercontrols:ProjectForStudentControl/>
-                    <usercontrols:ProjectForStudentControl/>
-
-                </StackPanel>
+                -->
             </StackPanel>
         </ScrollViewer>
     </Grid>

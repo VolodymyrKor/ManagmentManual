@@ -108,6 +108,9 @@
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ResultPage1.xaml.cs">
+      <DependentUpon>ResultPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ResultPage.xaml.cs">
       <DependentUpon>ResultPage.xaml</DependentUpon>
     </Compile>
@@ -117,11 +120,17 @@
     <Compile Include="Pages\StartExpertPage.xaml.cs">
       <DependentUpon>StartExpertPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StartStudentPage1.xaml.cs">
+      <DependentUpon>StartStudentPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\StartStudentPage.xaml.cs">
       <DependentUpon>StartStudentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TestViewingExpertPage.xaml.cs">
       <DependentUpon>TestViewingExpertPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestViewingStudentPage1.xaml.cs">
+      <DependentUpon>TestViewingStudentPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TestViewingStudentPage.xaml.cs">
       <DependentUpon>TestViewingStudentPage.xaml</DependentUpon>
@@ -150,8 +159,29 @@
     <Compile Include="User.cs">
       <DependentUpon>ManagmentManualDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DefaultUserControlForUsers1.xaml.cs">
+      <DependentUpon>DefaultUserControlForUsers1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DefaultUserControlForUsers.xaml.cs">
       <DependentUpon>DefaultUserControlForUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectForStudentControl2.xaml.cs">
+      <DependentUpon>ProjectForStudentControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectForStudentControl1.xaml.cs">
+      <DependentUpon>ProjectForStudentControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskAddingUserControl2.xaml.cs">
+      <DependentUpon>TaskAddingUserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskAddingUserControl3.xaml.cs">
+      <DependentUpon>TaskAddingUserControl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskAddingUserControl4.xaml.cs">
+      <DependentUpon>TaskAddingUserControl4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaskAddingUserControl1.xaml.cs">
+      <DependentUpon>TaskAddingUserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlForExpert.xaml.cs">
       <DependentUpon>UserControlForExpert.xaml</DependentUpon>
@@ -231,6 +261,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ResultPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\ResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +277,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\StartStudentPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\StartStudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -251,13 +289,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\TestViewingStudentPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\TestViewingStudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\DefaultUserControlForUsers1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\DefaultUserControlForUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectForStudentControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ProjectForStudentControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskAddingUserControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskAddingUserControl3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskAddingUserControl4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskAddingUserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\UserControlForExpert.xaml">
       <SubType>Designer</SubType>

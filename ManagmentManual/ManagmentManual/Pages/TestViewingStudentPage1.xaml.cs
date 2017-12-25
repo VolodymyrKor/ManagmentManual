@@ -18,9 +18,9 @@ namespace ManagmentManual.Pages
     /// <summary>
     /// Interaction logic for TestViewingStudentPage.xaml
     /// </summary>
-    public partial class TestViewingStudentPage : Page
+    public partial class TestViewingStudentPage1 : Page
     {
-        public TestViewingStudentPage()
+        public TestViewingStudentPage1()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace ManagmentManual.Pages
         {
             
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new ResultPage());
+            service.Navigate(new ResultPage1());
         }
 
         private void LogoutBtn_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,4 @@
-﻿<Page x:Class="ManagmentManual.Pages.ResultPage"
+﻿<Page x:Class="ManagmentManual.Pages.ResultPage1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -92,7 +92,7 @@
                            FontSize="28" 
                            Margin="282,34,282,310" 
                            Foreground="#FFB9B9B9"/>
-                <TextBlock Text="23 %" 
+                <TextBlock Text="74 %" 
                            HorizontalAlignment="Center" 
                            FontWeight="Bold" 
                            FontSize="48" 
