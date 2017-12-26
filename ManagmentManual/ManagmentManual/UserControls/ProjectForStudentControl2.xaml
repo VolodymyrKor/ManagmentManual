@@ -12,8 +12,8 @@
     <materialDesign:Card Margin="5" Background="White">
         <Grid Opacity="0.9" Height="190" Background="#FFFAFAFA">
             <Button Height="32" Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Start" FontSize="14" Name="StartTestButton" Click="StartTestButton_Click" Margin="296,112,24,46"></Button>
-            <Label  Content="Another Test" FontSize="24" HorizontalAlignment="Left" Margin="133,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.635,-1.012"/>
-            <Label Content="Another tiny test description........" FontSize="14" HorizontalAlignment="Left" Margin="35,52,0,0" VerticalAlignment="Top"/>
+            <Label  Content="Created Test" FontSize="24" HorizontalAlignment="Left" Margin="133,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.635,-1.012"/>
+            <Label Content="Tiny test description" FontSize="14" HorizontalAlignment="Left" Margin="35,52,0,0" VerticalAlignment="Top"/>
             <Label Opacity="0.6" Content="Created By:" FontSize="12" HorizontalAlignment="Left" Margin="35,118,0,0" VerticalAlignment="Top"/>
             <Label Opacity="0.6" Content="Status:" FontSize="12" HorizontalAlignment="Left" Margin="35,96,0,0" VerticalAlignment="Top"/>
             <Label Opacity="0.6" Content="Examinator expert" FontSize="12" HorizontalAlignment="Left" Margin="105,118,0,0" VerticalAlignment="Top"/>

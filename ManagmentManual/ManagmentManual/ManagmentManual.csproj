@@ -117,6 +117,15 @@
     <Compile Include="Pages\StartAdminPage.xaml.cs">
       <DependentUpon>StartAdminPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StartExpertPage3.xaml.cs">
+      <DependentUpon>StartExpertPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartExpertPage2.xaml.cs">
+      <DependentUpon>StartExpertPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartExpertPage1.xaml.cs">
+      <DependentUpon>StartExpertPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\StartExpertPage.xaml.cs">
       <DependentUpon>StartExpertPage.xaml</DependentUpon>
     </Compile>
@@ -164,6 +173,18 @@
     </Compile>
     <Compile Include="UserControls\DefaultUserControlForUsers.xaml.cs">
       <DependentUpon>DefaultUserControlForUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectControl4.xaml.cs">
+      <DependentUpon>ProjectControl4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectControl1.xaml.cs">
+      <DependentUpon>ProjectControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectControl2.xaml.cs">
+      <DependentUpon>ProjectControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectControl3.xaml.cs">
+      <DependentUpon>ProjectControl3.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProjectForStudentControl2.xaml.cs">
       <DependentUpon>ProjectForStudentControl2.xaml</DependentUpon>
@@ -273,6 +294,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\StartExpertPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\StartExpertPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\StartExpertPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\StartExpertPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -304,6 +337,22 @@
     <Page Include="UserControls\DefaultUserControlForUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectControl4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ProjectControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ProjectControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ProjectControl3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\ProjectForStudentControl2.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -179,9 +179,7 @@
                         <usercontrols:TaskAddingUserControl/>
                         <usercontrols:TaskAddingUserControl/>
                         <usercontrols:TaskAddingUserControl/>
-                        <usercontrols:TaskAddingUserControl/>
-                        <usercontrols:TaskAddingUserControl/>
-                        <usercontrols:TaskAddingUserControl/>
+  
                     </StackPanel>
                 </ScrollViewer>
                 <!--URGENT!!!!! PLS unkomment this code and use it, actual stackpanel one is just for design -->

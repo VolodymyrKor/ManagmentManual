@@ -16,32 +16,25 @@ using System.Windows.Shapes;
 namespace ManagmentManual.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ProjectCreatingPage.xaml
+    /// Interaction logic for StartExpertPage.xaml
     /// </summary>
-    public partial class ProjectCreatingPage : Page
+    public partial class StartExpertPage1 : Page
     {
-        public ProjectCreatingPage()
+        public StartExpertPage1()
         {
             InitializeComponent();
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e) //exit
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
             service.Navigate(new LoginPage());
-
         }
 
-        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e) //savng the results
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new StartExpertPage());
-        }
-
-        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e) //get back
-        {
-            var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new StartExpertPage());
+            service.Navigate(new ProjectCreatingPage());
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
@@ -52,13 +45,14 @@ namespace ManagmentManual.Pages
 
         private void UserNameTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            var service = NavigationService.GetNavigationService(this);
+            service.Navigate(new LoginPage());
         }
 
-        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        private void CreateNewButton_Click(object sender, RoutedEventArgs e)
         {
             var service = NavigationService.GetNavigationService(this);
-            service.Navigate(new StartExpertPage3());
+            service.Navigate(new ProjectCreatingPage());
         }
     }
 }

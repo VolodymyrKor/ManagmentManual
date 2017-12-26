@@ -1,4 +1,4 @@
-﻿<Page x:Class="ManagmentManual.Pages.StartExpertPage"
+﻿<Page x:Class="ManagmentManual.Pages.StartExpertPage1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -92,10 +92,9 @@
                 <StackPanel Orientation="Horizontal">
                     <usercontrols:ProjectControl1/>
                     <usercontrols:ProjectControl2/>
-                    <usercontrols:ProjectControl3/>
 
                 </StackPanel>
-               
+                
             </StackPanel>
         </ScrollViewer>
         <Button Margin="50"
